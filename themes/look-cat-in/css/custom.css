@@ -1,9 +1,14 @@
-
 /* == General Styles == */
 #wpadminbar{
-	opacity: 0.5;
+	height: 13px;
+	opacity: 0.7;
+	overflow: hidden;
+	-webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 #wpadminbar:hover{
+	height: 32px;
 	opacity: 1;
 }
 *{
