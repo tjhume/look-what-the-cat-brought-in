@@ -119,6 +119,9 @@ nav{
 	padding-bottom: 120px;
 	display: table;
 	position: relative;
+	-webkit-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
 }
 
 #home-hero-content{
