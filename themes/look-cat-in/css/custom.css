@@ -103,10 +103,10 @@ nav{
     transition: color 0.3s;
 }
 #menu-header-menu li a:hover{
-	color: #ffc83f;
+	color: #F2D36B;
 }
 #menu-header-menu li.current-menu-item a{
-	color: #ffc83f;
+	color: #F2D36B;
 }
 
 
@@ -169,7 +169,7 @@ nav{
     transition: background-color 0.3s, color 0.3s;
 }
 #home-hero-buttons .button:hover{
-	background-color: #E7B429;
+	background-color: #F2D36B;
 	color: #212529;
 }
 #home-hero-social{
