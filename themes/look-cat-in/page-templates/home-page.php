@@ -36,9 +36,56 @@ $options_id = get_theme_options_id(); ?>
         </div>
     </section>
 
-    <section id="featured-cats">
-        <div>
-            
+    <section id="about">
+        <div id="about-tabs-wrapper">
+            <ul id="about-tabs">
+                <li><a href="#what-we-do" class="active">What we do</a></li>
+                <li><a href="#who-we-are">Who we are</a></li>
+                <li><a href="#contact-us">Contact us</a></li>
+                <li><a href="#visit-us">Visit us</a></li>
+            </ul>
+        </div>
+        <div id="about-display">
+            <div id="what-we-do" class="content active">
+                <h2>What we do</h2>
+                <div class="text">
+                    <p>In tincidunt massa sed eros laoreet, sed vehicula orci vulputate. Curabitur consequat mauris sed varius tempor. Integer lacinia nulla tincidunt metus porttitor, sed condimentum magna sollicitudin. Donec sed dui dignissim nulla aliquam tristique eu sit amet elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec eget ante egestas, euismod ipsum eu, vulputate odio. Proin mattis mauris dignissim arcu tempus, ut commodo sem ullamcorper. Duis tincidunt molestie diam nec porttitor. Nunc tincidunt diam in velit imperdiet, in lacinia quam rutrum. Integer ullamcorper luctus imperdiet. Cras ac massa mollis, interdum lacus in, euismod metus.</p>
+                </div>
+                <div class="img">
+                    <img src="https://static.wixstatic.com/media/61d72f_b1c57b14d9ed4fc9a3676296a2604d0f~mv2.jpg/v1/fill/w_292,h_325,al_c,q_80,usm_0.66_1.00_0.01/kitten2.webp" alt="some-image">
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div id="who-we-are" class="content">
+                <h2>Who we are</h2>
+                <div class="text">
+                    <p>In tincidunt massa sed eros laoreet, sed vehicula orci vulputate. Curabitur consequat mauris sed varius tempor. Integer lacinia nulla tincidunt metus porttitor, sed condimentum magna sollicitudin. Donec sed dui dignissim nulla aliquam tristique eu sit amet elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec eget ante egestas, euismod ipsum eu, vulputate odio. Proin mattis mauris dignissim arcu tempus, ut commodo sem ullamcorper. Duis tincidunt molestie diam nec porttitor. Nunc tincidunt diam in velit imperdiet, in lacinia quam rutrum. Integer ullamcorper luctus imperdiet. Cras ac massa mollis, interdum lacus in, euismod metus.</p>
+                </div>
+                <div class="img">
+                    <img src="https://static.wixstatic.com/media/61d72f_b1c57b14d9ed4fc9a3676296a2604d0f~mv2.jpg/v1/fill/w_292,h_325,al_c,q_80,usm_0.66_1.00_0.01/kitten2.webp" alt="some-image">
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div id="contact-us" class="content">
+                <h2>Contact Us</h2>
+                <div class="text">
+                    <p>In tincidunt massa sed eros laoreet, sed vehicula orci vulputate. Curabitur consequat mauris sed varius tempor. Integer lacinia nulla tincidunt metus porttitor, sed condimentum magna sollicitudin. Donec sed dui dignissim nulla aliquam tristique eu sit amet elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec eget ante egestas, euismod ipsum eu, vulputate odio. Proin mattis mauris dignissim arcu tempus, ut commodo sem ullamcorper. Duis tincidunt molestie diam nec porttitor. Nunc tincidunt diam in velit imperdiet, in lacinia quam rutrum. Integer ullamcorper luctus imperdiet. Cras ac massa mollis, interdum lacus in, euismod metus.</p>
+                </div>
+                <div class="img">
+                    <img src="https://static.wixstatic.com/media/61d72f_b1c57b14d9ed4fc9a3676296a2604d0f~mv2.jpg/v1/fill/w_292,h_325,al_c,q_80,usm_0.66_1.00_0.01/kitten2.webp" alt="some-image">
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div id="visit-us" class="content">
+                <h2>Visit Us</h2>
+                <div class="text">
+                    <p>In tincidunt massa sed eros laoreet, sed vehicula orci vulputate. Curabitur consequat mauris sed varius tempor. Integer lacinia nulla tincidunt metus porttitor, sed condimentum magna sollicitudin. Donec sed dui dignissim nulla aliquam tristique eu sit amet elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec eget ante egestas, euismod ipsum eu, vulputate odio. Proin mattis mauris dignissim arcu tempus, ut commodo sem ullamcorper. Duis tincidunt molestie diam nec porttitor. Nunc tincidunt diam in velit imperdiet, in lacinia quam rutrum. Integer ullamcorper luctus imperdiet. Cras ac massa mollis, interdum lacus in, euismod metus.</p>
+                </div>
+                <div class="img">
+                    <img src="https://static.wixstatic.com/media/61d72f_b1c57b14d9ed4fc9a3676296a2604d0f~mv2.jpg/v1/fill/w_292,h_325,al_c,q_80,usm_0.66_1.00_0.01/kitten2.webp" alt="some-image">
+                </div>
+                <div class="clear"></div>
+            </div>
         </div>
     </section>
 </div>
