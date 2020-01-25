@@ -1,7 +1,11 @@
 jQuery(document).ready(function(){
     //Sets a static height for phones & tablets (fallback for CSS which has !important)
     if(window.mobileAndTabletcheck()){
-        jQuery("#hero-background").css("height", "450px");
+        jQuery("#home-hero").css("height", "auto");
+        jQuery("#home-hero-content").css({
+            "margin-top": "150px",
+            "margin-bottom": "150px"
+        })
     }
 
     jQuery("#about-tabs a").click(function(event){

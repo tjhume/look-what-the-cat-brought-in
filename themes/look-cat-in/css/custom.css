@@ -307,7 +307,13 @@ nav{
 /*=== Media Queries ===*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-
+	#home-hero{
+		height: auto !important;
+	}
+	#home-hero-content{
+		margin-top: 150px !important;
+		margin-bottom: 150px !important;
+	}
 }
 
 /* Medium Devices, Desktops */
