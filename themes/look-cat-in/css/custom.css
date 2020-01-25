@@ -42,6 +42,12 @@ a:focus{
 	display: table-cell;
 	vertical-align: middle;
 }
+noscript{
+	text-align: center;
+	display: block;
+	font-weight: bold;
+	color: #F2D36B;
+}
 
 
 
@@ -205,6 +211,9 @@ nav{
 	width: 100%;
 	padding-top: 40px;
 }
+#about noscript{
+	margin-bottom: 20px;
+}
 #about-tabs-wrapper, #about-display{
 	width: 800px;
 	max-width: 90%;
@@ -263,6 +272,9 @@ nav{
 	-webkit-transition: opacity 1.3s;
     -o-transition: opacity 1.3s;
 	transition: padding 1.3s, opacity 1.3s;
+}
+#about-display .content h2{
+	margin-top: 0;
 }
 #about-display .text{
 	float: left;

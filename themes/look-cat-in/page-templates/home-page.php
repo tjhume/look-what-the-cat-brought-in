@@ -38,6 +38,7 @@ $options_id = get_theme_options_id(); ?>
 
     <section id="about">
         <div id="about-tabs-wrapper">
+            <noscript>Please enable JavaScript to use these tabs!</noscript>
             <ul id="about-tabs">
                 <li><a href="#what-we-do" class="active">What we do</a></li>
                 <li><a href="#who-we-are">Who we are</a></li>

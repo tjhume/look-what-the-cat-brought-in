@@ -4,7 +4,8 @@ jQuery(document).ready(function(){
         jQuery("#hero-background").css("height", "450px");
     }
 
-    jQuery("#about-tabs a").click(function(){
+    jQuery("#about-tabs a").click(function(event){
+        event.preventDefault();
         if(!jQuery(this).hasClass("active")){
             var href = jQuery(this).attr("href");
             SetActiveTab(href.substr(1, href.length));
