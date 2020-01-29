@@ -5,18 +5,17 @@
 get_header(); 
 $options_id = get_theme_options_id(); ?>
 
-<div id="hero-background" style="background-image: url('<?php echo CFS()->get('hero_background_image'); ?>')">
+<div id="hero-background" style="background-image: url('<?php the_field('hero_background_image'); ?>')">
 
     <section id="home-hero">
         <div class="cell-wrap">
             <div id="home-hero-content">
-                <h1><?php echo CFS()->get('hero_title'); ?></h1>
+                <h1><?php the_field('hero_title'); ?></h1>
                 <div id="home-hero-buttons">
                     <div class="button-wrap">
-                        <?php $hero_buttons = CFS()->get('hero_buttons');
-                        foreach ( $hero_buttons as $button ) { ?>
-                            <a href="<?php echo $button['link']; ?>" class="button"><?php echo $button['text']; ?></a>
-                        <?php } ?>
+                        <?php if(have_rows('hero_buttons')): while(have_rows('hero_buttons')):the_row(); ?>
+                            <a href="<?php the_sub_field('button_link'); ?>" class="button"><?php the_sub_field('button_text'); ?></a>
+                        <?php endwhile; endif; ?>
                         <div class="clear"></div>
                     </div>
                 </div>
@@ -24,13 +23,14 @@ $options_id = get_theme_options_id(); ?>
         </div>
         <div id="home-hero-social">
             <div class="hero-social-wrap">
-                <?php $social_icons = CFS()->get('hero_social_icons');
-                foreach ( $social_icons as $icon ) { 
-                    $icon_id = $icon['icon'];
-                    $icon_alt = get_post_meta($icon_id, '_wp_attachment_image_alt', true);
-                    $icon_src = wp_get_attachment_image_src($icon_id, 'full', false); ?>
-                    <a href="<?php echo $icon['url']; ?>" class="hero-social-icon"><img src="<?php echo $icon_src[0]; ?>" alt="<?php echo $icon_alt; ?>" target="_blank"></a>
-                <?php } ?>
+                <?php if(have_rows('hero_social_icons')): while(have_rows('hero_social_icons')):the_row(); 
+                    $image = get_sub_field('image');
+                    $alt = esc_attr($image['alt']);
+                    $src = esc_url($image['url']);
+                    $link = get_sub_field('link'); ?>
+
+                    <a href="<?php echo $link; ?>" class="hero-social-icon" target="_blank"><img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>"></a>
+                <?php endwhile; endif; ?>
                 <div class="clear"></div>
             </div>
         </div>

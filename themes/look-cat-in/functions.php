@@ -127,6 +127,11 @@ function get_theme_options_id(){
 }
 
 /**
+ * Add repeaters
+ */
+include_once('acf-repeater/acf-repeater.php');
+
+/**
  * Removes HTML Spacing above WP Admin Bar
  */
 function remove_admin_login_header(){

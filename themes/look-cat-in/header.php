@@ -25,7 +25,7 @@
 	<header>
 		<nav>
 			<div id="nav-logo">
-				<a href="/"><img src="<?php echo CFS()->get( 'site_logo', $options_id ); ?>" alt="Look What the Cat Brought In"></a>
+				<a href="/"><img src="<?php the_field( 'site_logo', $options_id ); ?>" alt="Look What the Cat Brought In"></a>
 			</div>
 			<div id="nav-links">
 				<?php wp_nav_menu( array(
