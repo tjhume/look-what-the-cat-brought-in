@@ -99,7 +99,7 @@ $options_id = get_theme_options_id(); ?>
             <div id="contact-us" class="content">
                 <div class="text">
                     <h2>Contact Us</h2>
-                    <p>In tincidunt massa sed eros laoreet, sed vehicula orci vulputate. Curabitur consequat mauris sed varius tempor. Integer lacinia nulla tincidunt metus porttitor, sed condimentum magna sollicitudin. Donec sed dui dignissim nulla aliquam tristique eu sit amet elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec eget ante egestas, euismod ipsum eu, vulputate odio. Proin mattis mauris dignissim arcu tempus, ut commodo sem ullamcorper. Duis tincidunt molestie diam nec porttitor. Nunc tincidunt diam in velit imperdiet, in lacinia quam rutrum. Integer ullamcorper luctus imperdiet. Cras ac massa mollis, interdum lacus in, euismod metus.</p>
+                    <?php echo do_shortcode('[contact-form-7 id="1091" title="Contact Form"]'); ?>
                 </div>
                 <div class="img">
                     <img src="https://static.wixstatic.com/media/61d72f_b1c57b14d9ed4fc9a3676296a2604d0f~mv2.jpg/v1/fill/w_292,h_325,al_c,q_80,usm_0.66_1.00_0.01/kitten2.webp" alt="some-image">
