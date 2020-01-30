@@ -1,7 +1,8 @@
 /* Hiding Ads and other unnecessary things */
 .post-type-cfs .subsubsub li:last-child,
 #c2c,
-#footer-thankyou{
+#footer-thankyou,
+.acf-column-2{
 	display: none;
 }
 
