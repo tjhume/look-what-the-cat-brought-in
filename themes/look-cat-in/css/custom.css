@@ -335,6 +335,44 @@ nav{
     -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.5);
 	box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.5);
 }
+#about-display #contact-us .text{
+	width: 100%;
+	float: none;
+}
+#about-display #contact-us h2{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#about-display .wpcf7{
+	width: 90%;
+	margin: auto;
+}
+#about-display .wpcf7 select, #about-display .wpcf7 input, #about-display .wpcf7 textarea{
+	width: 100%;
+	min-height: 32px;
+	font-family: Karla, sans-serif;
+	margin-bottom: 5px;
+}
+#about-display .wpcf7 textarea{
+	height: 150px;
+}
+#about-display .wpcf7 input.wpcf7-submit{
+	width: 100px;
+	background-color: #F2D36B;
+	-webkit-transition: background-color 0.3s, color 0.3s;
+    -o-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+	color: #212529;
+	margin: 0;
+	cursor: pointer;
+	font-size: 16px;
+	border: none;
+	outline: none;
+}
+#about-display .wpcf7 input.wpcf7-submit:hover{
+	background-color: #FFE284;
+}
 
 
 
