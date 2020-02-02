@@ -50,10 +50,15 @@ $options_id = get_theme_options_id(); ?>
             <div id="what-we-do" class="content active">
                 <div class="text">
                     <h2>What we do</h2>
-                    <p>In tincidunt massa sed eros laoreet, sed vehicula orci vulputate. Curabitur consequat mauris sed varius tempor. Integer lacinia nulla tincidunt metus porttitor, sed condimentum magna sollicitudin. Donec sed dui dignissim nulla aliquam tristique eu sit amet elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec eget ante egestas, euismod ipsum eu, vulputate odio. Proin mattis mauris dignissim arcu tempus, ut commodo sem ullamcorper. Duis tincidunt molestie diam nec porttitor. Nunc tincidunt diam in velit imperdiet, in lacinia quam rutrum. Integer ullamcorper luctus imperdiet. Cras ac massa mollis, interdum lacus in, euismod metus.</p>
+                    <p><?php the_field('what_we_do_content'); ?></p>
                 </div>
+                <?php
+                    $image = get_field('what_we_do_image');
+                    $alt = esc_attr($image['alt']);
+                    $src = esc_url($image['url']);
+                ?>
                 <div class="img">
-                    <img src="https://static.wixstatic.com/media/61d72f_b1c57b14d9ed4fc9a3676296a2604d0f~mv2.jpg/v1/fill/w_292,h_325,al_c,q_80,usm_0.66_1.00_0.01/kitten2.webp" alt="some-image">
+                    <img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>">
                 </div>
                 <div class="clear"></div>
             </div>
@@ -61,38 +66,33 @@ $options_id = get_theme_options_id(); ?>
                 <div class="text">
                     <h2>Who we are</h2>
                     <div class="left-list">
-                        <p class="list-heading">Directors and Officers</p>
+                        <p class="list-heading"><?php the_field('who_we_are_column_1_title'); ?></p>
                         <hr>
                         <ul>
-                            <li>Jennifer Nosler, President</li>
-                            <li>Cecilia Richardson, Vice President</li>
-                            <li>Megan Krieger, Treasurer</li>
-                            <li>Megan Phillips, Secretary</li>
-                            <li>Shari Thorne, Director</li>
-                            <li>Deborah Morin, Director</li>
-                            <li>Kathryn Neugent, Director</li>
-                            <li>Ariel Heart, Director</li>
-                            <li>Lee Richards, Director</li>
-                            <li>Amelia Mellett Keith, Director</li>
-                            <li>Cecily Harsh de Gutierrez, Director</li>
+                        <?php if(have_rows('who_we_are_column_1_list')): while(have_rows('who_we_are_column_1_list')):the_row(); ?>
+                            <li><?php the_sub_field('member_name'); ?></li>
+                        <?php endwhile; endif; ?>
                         </ul>
                     </div>
                     
                     <div class="right-list">
-                        <p class="list-heading">Veterinary Advisors</p>
+                        <p class="list-heading"><?php the_field('who_we_are_column_2_title'); ?></p>
                         <hr>
                         <ul>
-                            <li>Patrick Vall, DVM</li>
-                            <li>Amelia Mellett, DVM, Diplomat American College of Veterinary Internal Medicine</li>
-                            <li>Chris McReynolds, DVM, Diplomat American College  of Veterinary Internal Medicine</li>
-                            <li>Kelly McCarty, DVM</li>
+                        <?php if(have_rows('who_we_are_column_2_list')): while(have_rows('who_we_are_column_2_list')):the_row(); ?>
+                            <li><?php the_sub_field('member_name'); ?></li>
+                        <?php endwhile; endif; ?>
                         </ul>
                     </div>
-
                     <div class="clear"></div>
                 </div>
+                <?php
+                    $image = get_field('who_we_are_image');
+                    $alt = esc_attr($image['alt']);
+                    $src = esc_url($image['url']);
+                ?>
                 <div class="img">
-                    <img src="https://static.wixstatic.com/media/61d72f_b1c57b14d9ed4fc9a3676296a2604d0f~mv2.jpg/v1/fill/w_292,h_325,al_c,q_80,usm_0.66_1.00_0.01/kitten2.webp" alt="some-image">
+                    <img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>">
                 </div>
                 <div class="clear"></div>
             </div>

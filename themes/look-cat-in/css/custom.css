@@ -298,8 +298,8 @@ nav{
 }
 #about-display ul li{
 	font-size: 14px;
-	margin-top: 2px;
-	margin-bottom: 2px;
+	margin-bottom: 6px;
+	line-height: 1;
 }
 #about-display .right-list, #about-display .left-list{
 	float: left;
