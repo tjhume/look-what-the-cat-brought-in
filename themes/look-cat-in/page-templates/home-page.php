@@ -40,10 +40,7 @@ $options_id = get_theme_options_id(); ?>
         <div id="about-tabs-wrapper">
             <noscript>Please enable JavaScript to use these tabs!</noscript>
             <ul id="about-tabs">
-                <li><a href="#what-we-do" class="active">What we do</a></li>
-                <li><a href="#who-we-are">Who we are</a></li>
-                <li><a href="#contact-us">Contact us</a></li>
-                <li><a href="#visit-us">Visit us</a></li>
+                <li><a href="#what-we-do" class="active">What we do</a></li><li><a href="#who-we-are">Who we are</a></li><li><a href="#contact-us">Contact us</a></li><li><a href="#visit-us">Visit us</a></li>
             </ul>
         </div>
         <div id="about-display">
@@ -106,13 +103,34 @@ $options_id = get_theme_options_id(); ?>
             <div id="visit-us" class="content right">
                 <div class="text">
                     <h2>Visit Us</h2>
-                    <p>In tincidunt massa sed eros laoreet, sed vehicula orci vulputate. Curabitur consequat mauris sed varius tempor. Integer lacinia nulla tincidunt metus porttitor, sed condimentum magna sollicitudin. Donec sed dui dignissim nulla aliquam tristique eu sit amet elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec eget ante egestas, euismod ipsum eu, vulputate odio. Proin mattis mauris dignissim arcu tempus, ut commodo sem ullamcorper. Duis tincidunt molestie diam nec porttitor. Nunc tincidunt diam in velit imperdiet, in lacinia quam rutrum. Integer ullamcorper luctus imperdiet. Cras ac massa mollis, interdum lacus in, euismod metus.</p>
-                </div>
-                <div class="img">
-                    <img src="https://static.wixstatic.com/media/61d72f_b1c57b14d9ed4fc9a3676296a2604d0f~mv2.jpg/v1/fill/w_292,h_325,al_c,q_80,usm_0.66_1.00_0.01/kitten2.webp" alt="some-image">
-                </div>
-                <div class="clear"></div>
+                    <?php the_field('visit_us_google_map'); ?>
             </div>
+        </div>
+    </section>
+    <section id="latest-news">
+        <h1>Latest News</h1>
+        <div id="news-container">
+            <?php
+                $latest_args = array(
+                    "posts_per_page" => 1,
+                    'post_type' => 'post',
+                    "orderby"        => "date",
+                    "order"          => "DESC"
+                );      
+                
+                $latest_news = new WP_Query($latest_args);
+
+                if ($latest_news -> have_posts()){ while($latest_news -> have_posts()) : $latest_news -> the_post();
+                    //Post Content ?>
+                    <div id="latest-content">
+                        <h2><?php the_title(); ?></h2>
+                        <?php the_field('post_content'); ?>
+                    </div>
+                <?php endwhile; }else{ 
+                    //If no posts are found ?>
+                    <h2>No News Found</h2>
+                <?php }
+            ?>
         </div>
     </section>
 </div>

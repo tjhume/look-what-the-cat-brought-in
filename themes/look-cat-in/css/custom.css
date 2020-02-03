@@ -198,6 +198,7 @@ nav{
 	height: 100%;
 }
 
+
 /* About */
 #about{
 	background-color: rgba(122, 184, 255, 0.65);
@@ -244,8 +245,12 @@ nav{
 }
 #about-display{
 	position: relative;
+	display: table;
+	min-height: 532px;
 }
 #about-display .content{
+	display: table-cell;
+	vertical-align: middle;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -266,6 +271,12 @@ nav{
 	-webkit-transition: opacity 1.3s;
     -o-transition: opacity 1.3s;
 	transition: padding 1.3s, opacity 1.3s;
+}
+#about-display .content iframe{
+	visibility: hidden;
+}
+#about-display .content.active iframe{
+	visibility: visible;
 }
 #about-display .content h2{
 	margin-top: 0;
@@ -335,7 +346,7 @@ nav{
     -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.5);
 	box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.5);
 }
-#about-display #contact-us .text{
+#about-display #contact-us .text, #about-display #visit-us .text{
 	width: 100%;
 	float: none;
 }
@@ -372,6 +383,42 @@ nav{
 }
 #about-display .wpcf7 input.wpcf7-submit:hover{
 	background-color: #FFE284;
+}
+
+
+/* Latest News */
+#latest-news{
+	background-color: rgba(122, 184, 255, 0.65);
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#latest-news h1{
+	text-align: center;
+	margin-bottom: 50px;
+	color: white;
+}
+#latest-content{
+	width: 1000px;
+	max-width: 90%;
+	margin: 0 auto;
+	color: white;
+}
+
+
+
+
+
+/*=== Posts ===*/
+body.admin-bar #post-content{
+	margin-top: 92px;
+}
+#post-content{
+	margin-top: 60px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+	max-width: 90%;
+	padding-top: 100px;
 }
 
 
