@@ -42,6 +42,9 @@ noscript{
 	font-weight: bold;
 	color: #F2D36B;
 }
+p{
+	line-height: 1.2;
+}
 
 
 
@@ -285,7 +288,6 @@ nav{
 	float: left;
 	width: 65%;
 	padding-right: 10px;
-	line-height: 1.2;
 }
 #about-display p{
 	margin: 0;
@@ -401,6 +403,7 @@ nav{
 #latest-news{
 	padding-top: 50px;
 	padding-bottom: 50px;
+	background-color: white;
 }
 #latest-news h1{
 	text-align: center;
@@ -412,6 +415,58 @@ nav{
 	margin: 0 auto;
 }
 
+
+/* Featured Cats */
+#featured-cats{
+	background-color: rgba(122, 184, 255, 0.65);
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#featured-cats h1{
+	text-align: center;
+	color: white;
+	margin-bottom: 30px;
+}
+#featured-cats-wrapper{
+	width: 1200px;
+	max-width: 90%;
+	margin: 0 auto;
+}
+#featured-cats-wrapper .featured-cat-box{
+	float: left;
+	width: 33.33%;
+	padding-right: 30px;
+	padding-left: 30px;
+}
+#featured-cats-wrapper .featured-cat-box>div{
+	background-color: rgba(242, 211, 133, 0.75);
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.5);
+}
+#featured-cats-wrapper .featured-cat-box img{
+	display: block;
+	width: 100%;
+	max-height: 200px;
+	object-fit: cover;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+#featured-cats-wrapper .featured-cat-box p,
+#featured-cats-wrapper .featured-cat-box h2{
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0;
+}
+#featured-cats-wrapper .featured-cat-box h2{
+	padding-top: 8px;
+	padding-bottom: 8px;
+	text-align: center;
+}
+#featured-cats-wrapper .featured-cat-box p{
+	padding-bottom: 20px;
+}
 
 
 

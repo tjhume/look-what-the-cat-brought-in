@@ -114,35 +114,63 @@ $options_id = get_theme_options_id(); ?>
             </div>
         </div>
     </section>
+
+    <section id="latest-news">
+        <h1>Latest News</h1>
+        <div id="news-container">
+            <?php
+                $latest_args = array(
+                    "posts_per_page" => 1,
+                    'post_type' => 'post',
+                    "orderby"        => "date",
+                    "order"          => "DESC"
+                );      
+                
+                $latest_news = new WP_Query($latest_args);
+
+                if ($latest_news -> have_posts()){ while($latest_news -> have_posts()) : $latest_news -> the_post();
+                    //Post Content ?>
+                    <div id="latest-content">
+                        <h2><?php the_title(); ?></h2>
+                        <?php the_field('post_content'); ?>
+                    </div>
+                <?php endwhile; }else{ 
+                    //If no posts are found ?>
+                    <div id="latest-content">
+                    <h2>No News Found</h2>
+                    </div>
+                <?php }
+            ?>
+        </div>
+    </section>
+
+    <section id="featured-cats">
+        <h1>Featured Cats</h1>
+        <div id="featured-cats-wrapper">
+            <div class="featured-cat-box">
+                <div>
+                    <img src="http://localhost/wp-content/uploads/2020/02/Timmy.jpg" alt="">
+                    <h2>Timmy</h2>
+                    <p>My name is Timmy I am a kitty and I am pretty and my brothers name is Melvin the Melon and I like pets and stuff</p>
+                </div>
+            </div>
+            <div class="featured-cat-box">
+                <div>
+                    <img src="http://localhost/wp-content/uploads/2020/02/Timmy.jpg" alt="">
+                    <h2>Timmy</h2>
+                    <p>My name is Timmy I am a kitty and I am pretty and my brothers name is Melvin the Melon and I like pets and stuff</p>
+                </div>
+            </div>
+            <div class="featured-cat-box">
+                <div>
+                    <img src="http://localhost/wp-content/uploads/2020/02/Timmy.jpg" alt="">
+                    <h2>Timmy</h2>
+                    <p>My name is Timmy I am a kitty and I am pretty and my brothers name is Melvin the Melon and I like pets and stuff</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </section>
 </div>
-
-<section id="latest-news">
-    <h1>Latest News</h1>
-    <div id="news-container">
-        <?php
-            $latest_args = array(
-                "posts_per_page" => 1,
-                'post_type' => 'post',
-                "orderby"        => "date",
-                "order"          => "DESC"
-            );      
-            
-            $latest_news = new WP_Query($latest_args);
-
-            if ($latest_news -> have_posts()){ while($latest_news -> have_posts()) : $latest_news -> the_post();
-                //Post Content ?>
-                <div id="latest-content">
-                    <h2><?php the_title(); ?></h2>
-                    <?php the_field('post_content'); ?>
-                </div>
-            <?php endwhile; }else{ 
-                //If no posts are found ?>
-                <div id="latest-content">
-                <h2>No News Found</h2>
-                </div>
-            <?php }
-        ?>
-    </div>
-</section>
 
 <?php get_footer(); ?>
