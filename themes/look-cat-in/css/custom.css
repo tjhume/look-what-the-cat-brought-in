@@ -384,24 +384,32 @@ nav{
 #about-display .wpcf7 input.wpcf7-submit:hover{
 	background-color: #FFE284;
 }
+#visit-hours .appointment{
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+#visit-hours .hours{
+	margin-bottom: 10px;
+}
+#what-we-do strong{
+	font-size: 18px;
+	margin-bottom: 5px;
+}
 
 
 /* Latest News */
 #latest-news{
-	background-color: rgba(122, 184, 255, 0.65);
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
 #latest-news h1{
 	text-align: center;
 	margin-bottom: 50px;
-	color: white;
 }
 #latest-content{
 	width: 1000px;
 	max-width: 90%;
 	margin: 0 auto;
-	color: white;
 }
 
 

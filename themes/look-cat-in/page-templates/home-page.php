@@ -103,36 +103,46 @@ $options_id = get_theme_options_id(); ?>
             <div id="visit-us" class="content right">
                 <div class="text">
                     <h2>Visit Us</h2>
+                    <div id="visit-hours">
+                        <div class="hours">
+                            <?php the_field('visit_us_hours'); ?>
+                        </div>
+                        <p class="appointment">All other days by appointment only</p>
+                    </div>
                     <?php the_field('visit_us_google_map'); ?>
+                </div>
             </div>
         </div>
     </section>
-    <section id="latest-news">
-        <h1>Latest News</h1>
-        <div id="news-container">
-            <?php
-                $latest_args = array(
-                    "posts_per_page" => 1,
-                    'post_type' => 'post',
-                    "orderby"        => "date",
-                    "order"          => "DESC"
-                );      
-                
-                $latest_news = new WP_Query($latest_args);
-
-                if ($latest_news -> have_posts()){ while($latest_news -> have_posts()) : $latest_news -> the_post();
-                    //Post Content ?>
-                    <div id="latest-content">
-                        <h2><?php the_title(); ?></h2>
-                        <?php the_field('post_content'); ?>
-                    </div>
-                <?php endwhile; }else{ 
-                    //If no posts are found ?>
-                    <h2>No News Found</h2>
-                <?php }
-            ?>
-        </div>
-    </section>
 </div>
+
+<section id="latest-news">
+    <h1>Latest News</h1>
+    <div id="news-container">
+        <?php
+            $latest_args = array(
+                "posts_per_page" => 1,
+                'post_type' => 'post',
+                "orderby"        => "date",
+                "order"          => "DESC"
+            );      
+            
+            $latest_news = new WP_Query($latest_args);
+
+            if ($latest_news -> have_posts()){ while($latest_news -> have_posts()) : $latest_news -> the_post();
+                //Post Content ?>
+                <div id="latest-content">
+                    <h2><?php the_title(); ?></h2>
+                    <?php the_field('post_content'); ?>
+                </div>
+            <?php endwhile; }else{ 
+                //If no posts are found ?>
+                <div id="latest-content">
+                <h2>No News Found</h2>
+                </div>
+            <?php }
+        ?>
+    </div>
+</section>
 
 <?php get_footer(); ?>
