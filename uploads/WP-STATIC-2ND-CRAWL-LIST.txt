@@ -39,6 +39,7 @@
 /wp-content/uploads/2019/12/woocommerce-placeholder.png
 /wp-content/uploads/2020/01/facebook-icon.png
 /wp-content/uploads/2020/01/look-cat-in-logo.png
+/wp-content/uploads/2020/02/Timmy.jpg
 /wp-content/uploads/2020/02/what-we-do.jpg
 /wp-content/uploads/2020/02/who-we-are.jpg
 /wp-includes/css/dist/block-library/style.min.css

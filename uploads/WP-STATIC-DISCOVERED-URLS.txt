@@ -20,6 +20,7 @@
 /wp-content/uploads/2020/01/facebook-icon.png
 /wp-content/uploads/2020/02/what-we-do.jpg
 /wp-content/uploads/2020/02/who-we-are.jpg
+/wp-content/uploads/2020/02/Timmy.jpg
 /wp-content/plugins/contact-form-7/includes/js/scripts.js
 /wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js
 /wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js
@@ -132,6 +133,7 @@
 /wp-content/uploads/2020/01/facebook-icon.png
 /wp-content/uploads/2020/02/what-we-do.jpg
 /wp-content/uploads/2020/02/who-we-are.jpg
+/wp-content/uploads/2020/02/Timmy.jpg
 /wp-content/plugins/contact-form-7/includes/js/scripts.js
 /wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js
 /wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js

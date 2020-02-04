@@ -128,6 +128,15 @@
 /wp-content/uploads\2020\01\woocommerce-placeholder-600x600.png
 /wp-content/uploads\2020\01\woocommerce-placeholder-768x768.png
 /wp-content/uploads\2020\01\woocommerce-placeholder.png
+/wp-content/uploads\2020\02\Timmy-100x100.jpg
+/wp-content/uploads\2020\02\Timmy-1024x811.jpg
+/wp-content/uploads\2020\02\Timmy-150x150.jpg
+/wp-content/uploads\2020\02\Timmy-1536x1217.jpg
+/wp-content/uploads\2020\02\Timmy-300x238.jpg
+/wp-content/uploads\2020\02\Timmy-300x300.jpg
+/wp-content/uploads\2020\02\Timmy-600x475.jpg
+/wp-content/uploads\2020\02\Timmy-768x608.jpg
+/wp-content/uploads\2020\02\Timmy.jpg
 /wp-content/uploads\2020\02\what-we-do-100x100.jpg
 /wp-content/uploads\2020\02\what-we-do-150x150.jpg
 /wp-content/uploads\2020\02\what-we-do-268x300.jpg
@@ -182,6 +191,7 @@
 /wp-content/uploads/2019/12/woocommerce-placeholder.png
 /wp-content/uploads/2020/01/facebook-icon.png
 /wp-content/uploads/2020/01/look-cat-in-logo.png
+/wp-content/uploads/2020/02/Timmy.jpg
 /wp-content/uploads/2020/02/what-we-do.jpg
 /wp-content/uploads/2020/02/who-we-are.jpg
 /wp-includes/css/dist/block-library/style.min.css
