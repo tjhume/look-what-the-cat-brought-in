@@ -92,6 +92,10 @@ $options_id = get_theme_options_id(); ?>
                     <img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>">
                 </div>
                 <div class="clear"></div>
+                <h2 class="sponsors-heading">Our Sponsors</h2>
+                <div class="sponsors">
+                    <?php the_field('who_we_are_sponsors'); ?>
+                </div>
             </div>
             <div id="contact-us" class="content">
                 <div class="text">

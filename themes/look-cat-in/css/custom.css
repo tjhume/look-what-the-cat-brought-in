@@ -213,7 +213,7 @@ nav{
 	margin-bottom: 20px;
 }
 #about-tabs-wrapper, #about-display{
-	width: 800px;
+	width: 1100px;
 	max-width: 90%;
 	margin: 0 auto;
 }
@@ -249,7 +249,7 @@ nav{
 #about-display{
 	position: relative;
 	display: table;
-	min-height: 532px;
+	min-height: 700px;
 }
 #about-display .content{
 	display: table-cell;
@@ -274,6 +274,18 @@ nav{
 	-webkit-transition: opacity 1.3s;
     -o-transition: opacity 1.3s;
 	transition: padding 1.3s, opacity 1.3s;
+}
+#about-display .content a{
+	display: inline-block;
+	color: #F2D36B;
+	-webkit-transition-duration: 0.3s;
+         -o-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+}
+#about-display .content a:hover{
+	-webkit-transform: rotate(-4deg);
+        -ms-transform: rotate(-4deg);
+            transform: rotate(-4deg);
 }
 #about-display .content iframe{
 	visibility: hidden;
@@ -386,6 +398,21 @@ nav{
 #about-display .wpcf7 input.wpcf7-submit:hover{
 	background-color: #FFE284;
 }
+#about-display .content h2.sponsors-heading{
+	margin-top: 30px;
+	text-align: center;
+}
+#about-display .sponsors{
+	overflow: auto;
+}
+#about-display .sponsors img{
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	background: white;
+	height: 75px;
+	width: auto;
+}
 #visit-hours .appointment{
 	font-size: 14px;
 	margin-bottom: 10px;
@@ -394,6 +421,7 @@ nav{
 	margin-bottom: 10px;
 }
 #what-we-do strong{
+	display: inline-block;
 	font-size: 18px;
 	margin-bottom: 5px;
 }
@@ -410,7 +438,7 @@ nav{
 	margin-bottom: 50px;
 }
 #latest-content{
-	width: 1000px;
+	width: 1100px;
 	max-width: 90%;
 	margin: 0 auto;
 }
