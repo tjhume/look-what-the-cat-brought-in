@@ -10,7 +10,7 @@ $options_id = get_theme_options_id(); ?>
     <section id="home-hero">
         <div class="cell-wrap">
             <div id="home-hero-content">
-                <h1><?php the_field('hero_title'); ?></h1>
+                <img src="<?php the_field('hero_image'); ?>" alt="Look What the Cat Brought In">
                 <div id="home-hero-buttons">
                     <div class="button-wrap">
                         <?php if(have_rows('hero_buttons')): while(have_rows('hero_buttons')):the_row(); ?>
@@ -152,25 +152,22 @@ $options_id = get_theme_options_id(); ?>
         <h1>Featured Cats</h1>
         <div id="featured-cats-wrapper">
             <div class="featured-cat-box">
-                <div>
-                    <img src="http://localhost/wp-content/uploads/2020/02/Timmy.jpg" alt="">
-                    <h2>Timmy</h2>
-                    <p>My name is Timmy I am a kitty and I am pretty and my brothers name is Melvin the Melon and I like pets and stuff</p>
-                </div>
+                <a href="#"><img src="http://localhost/wp-content/uploads/2020/02/Timmy.jpg" alt=""></a>
+                <h2>Timmy</h2>
+                <p>My name is Timmy I am a kitty and I am pretty and my brothers name is Melvin the Melon and I like pets and stuff</p>
+                <p><a href="">Learn More &rarr;</a></p>
             </div>
             <div class="featured-cat-box">
-                <div>
-                    <img src="http://localhost/wp-content/uploads/2020/02/Timmy.jpg" alt="">
-                    <h2>Timmy</h2>
-                    <p>My name is Timmy I am a kitty and I am pretty and my brothers name is Melvin the Melon and I like pets and stuff</p>
-                </div>
+                <a href="#"><img src="http://localhost/wp-content/uploads/2020/02/Timmy.jpg" alt=""></a>
+                <h2>Timmy</h2>
+                <p>My name is Timmy I am a kitty and I am pretty and my brothers name is Melvin the Melon and I like pets and stuff</p>
+                <p><a href="">Learn More &rarr;</a></p>
             </div>
             <div class="featured-cat-box">
-                <div>
-                    <img src="http://localhost/wp-content/uploads/2020/02/Timmy.jpg" alt="">
-                    <h2>Timmy</h2>
-                    <p>My name is Timmy I am a kitty and I am pretty and my brothers name is Melvin the Melon and I like pets and stuff</p>
-                </div>
+                <a href="#"><img src="http://localhost/wp-content/uploads/2020/02/Timmy.jpg" alt=""></a>
+                <h2>Timmy</h2>
+                <p>My name is Timmy I am a kitty and I am pretty and my brothers name is Melvin the Melon and I like pets and stuff</p>
+                <p><a href="">Learn More &rarr;</a></p>
             </div>
             <div class="clear"></div>
         </div>
