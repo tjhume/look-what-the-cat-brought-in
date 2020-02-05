@@ -428,6 +428,10 @@ nav{
 	display: inline-block;
 	font-size: 18px;
 	margin-bottom: 5px;
+	margin-top: 18px;
+}
+#what-we-do a{
+	margin-top: 5px;
 }
 
 
