@@ -16,8 +16,19 @@ if('post' == get_post_type()){
 ?>
 
 <article id="post-content">
-	<h1><?php the_title(); ?></h1>
-	<div><?php the_field('post_content'); ?></div>
+	<div><?php
+	while ( have_posts() ) :
+		the_post();
+		?><h2 class="post-title"><?php the_title(); ?></h2><p class="post-date">
+		<?php if(get_field('use_custom_date')){
+			the_field('date');
+		}else{
+			the_date();
+		}?>
+		</p><?php
+		the_content();
+	endwhile;
+	?></div>
 </article>
 
 <?php 

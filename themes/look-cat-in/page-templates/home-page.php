@@ -130,6 +130,7 @@ $options_id = get_theme_options_id(); ?>
 
     <section id="latest-news">
         <h1>Latest News</h1>
+        <hr>
         <div id="news-container">
             <?php
                 $latest_args = array(
@@ -144,8 +145,15 @@ $options_id = get_theme_options_id(); ?>
                 if ($latest_news -> have_posts()){ while($latest_news -> have_posts()) : $latest_news -> the_post();
                     //Post Content ?>
                     <div id="latest-content">
-                        <h2><?php the_title(); ?></h2>
-                        <?php the_field('post_content'); ?>
+                        <h2 class="post-title"><?php the_title(); ?></h2>
+                        <p class="post-date">
+                        <?php if(get_field('use_custom_date')){
+                            the_field('date');
+                        }else{
+                            the_date();
+                        }?>
+                        </p>
+                        <?php the_content(); ?>
                     </div>
                 <?php endwhile; }else{ 
                     //If no posts are found ?>
