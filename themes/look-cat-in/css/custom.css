@@ -517,11 +517,16 @@ nav{
 	width: 100%;
 	max-height: 200px;
 	object-fit: cover;
-	border-radius: 30px;
-	transition: border-radius 0.3s;
+	border-radius: 15px;
+	-webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+	transition: all 0.3s;
 }
 #featured-cats-wrapper .featured-cat-box img:hover{
-	border-radius: 0px;
+	-webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.5);
+	transform: scale(1.1);
 }
 #featured-cats-wrapper .featured-cat-box p,
 #featured-cats-wrapper .featured-cat-box h2{
