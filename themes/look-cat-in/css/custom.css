@@ -131,6 +131,14 @@ nav{
     -o-transition: height 0.3s;
     transition: height 0.3s;
 }
+#home-hero h1{
+	text-align: center;
+	color: white;
+	font-size: 28px;
+	margin-bottom: 20px;
+	margin-top: 8px;
+	line-height: 1.1;
+}
 #home-hero-content{
 	max-width: 90%;
 	margin: auto;
@@ -139,7 +147,6 @@ nav{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 20px;
 }
 #home-hero-buttons{
 	width: 100%;
@@ -574,6 +581,7 @@ body.admin-bar #post-content{
 /*=== Media Queries ===*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
+	/* Home - Hero */
 	#home-hero{
 		height: auto !important;
 	}
@@ -581,6 +589,9 @@ body.admin-bar #post-content{
 		margin-top: 150px !important;
 		margin-bottom: 150px !important;
 	}
+
+
+	/* Home - About */
 	#about-display{
 		min-height: 0px;
 		padding-bottom: 50px;
@@ -614,6 +625,7 @@ body.admin-bar #post-content{
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+	/* Home - Featured Cats */
 	#featured-cats-wrapper .featured-cat-box img{
 		display: block;
 		margin: 0 auto;
@@ -632,13 +644,22 @@ body.admin-bar #post-content{
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-	/* General */
-	/* Home */
+	/* Home - Hero */
 	#home-hero-buttons .button{
 		float: none;
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 15px;
+	}
+	#home-hero h1{
+		font-size: 20px;
+	}
+	#home-hero-buttons{
+		height: 40px;
+	}
+	#home-hero-buttons .button{
+		line-height: 40px;
+		font-size: 16px;
 	}
 }
 

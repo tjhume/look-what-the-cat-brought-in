@@ -11,6 +11,7 @@ $options_id = get_theme_options_id(); ?>
         <div class="cell-wrap">
             <div id="home-hero-content">
                 <img src="<?php the_field('hero_image'); ?>" alt="Look What the Cat Brought In">
+                <h1><?php the_field('hero_title'); ?></h1>
                 <div id="home-hero-buttons">
                     <div class="button-wrap">
                         <?php if(have_rows('hero_buttons')): while(have_rows('hero_buttons')):the_row(); ?>
