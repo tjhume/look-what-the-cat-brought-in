@@ -1,0 +1,130 @@
+Log created: 2020-02-06 22:55:03
+Type: restore
+[2020-02-06 22:55:03][notice]init restore data
+[2020-02-06 22:55:03][notice]Start restoring localhost_wpvivid-5e3c9733a5de1_2020-02-06-22-46_backup_all.zip
+[2020-02-06 22:55:03][notice]extract root:C:\Users\Xirt\Desktop\Projects\Look What the Cat Brought In\wordpress/wp-content\backups\
+[2020-02-06 22:55:03][notice]start extract file:C:\Users\Xirt\Desktop\Projects\Look What the Cat Brought In\wordpress/wp-content\backups\localhost_wpvivid-5e3c9733a5de1_2020-02-06-22-46_backup_all.zip
+[2020-02-06 22:55:03][notice]extract finished file:C:\Users\Xirt\Desktop\Projects\Look What the Cat Brought In\wordpress/wp-content\backups\localhost_wpvivid-5e3c9733a5de1_2020-02-06-22-46_backup_all.zip
+[2020-02-06 22:55:03][notice]Finished restoring localhost_wpvivid-5e3c9733a5de1_2020-02-06-22-46_backup_all.zip
+[2020-02-06 22:55:05][notice]Start restoring localhost_wpvivid-5e3c9733a5de1_2020-02-06-22-46_backup_db.zip
+[2020-02-06 22:55:05][notice]start extract file:C:\Users\Xirt\Desktop\Projects\Look What the Cat Brought In\wordpress/wp-content\backups\localhost_wpvivid-5e3c9733a5de1_2020-02-06-22-46_backup_db.zip
+[2020-02-06 22:55:05][notice]extract finished file:C:\Users\Xirt\Desktop\Projects\Look What the Cat Brought In\wordpress/wp-content\backups\localhost_wpvivid-5e3c9733a5de1_2020-02-06-22-46_backup_db.zip
+[2020-02-06 22:55:05][notice]sql file: localhost_wpvivid-5e3c9733a5de1_2020-02-06-22-46_backup_db.sql
+[2020-02-06 22:55:05][Warning]wpdb
+[2020-02-06 22:55:06][notice]The test to create table succeeds.
+[2020-02-06 22:55:06][notice]The test to insert into table succeeds.
+[2020-02-06 22:55:06][notice]The test to drop table succeeds.
+[2020-02-06 22:55:06][notice]get max_allowed_packet wpdb 
+[2020-02-06 22:55:06][notice]max_allowed_packet less than 32M :1.00 MB
+[2020-02-06 22:55:06][notice]Start import sql file.
+[2020-02-06 22:55:06][notice]old site url:http://localhost
+[2020-02-06 22:55:06][notice]old home url:http://localhost
+[2020-02-06 22:55:06][notice]old content url:http://localhost/wp-content
+[2020-02-06 22:55:06][notice]old upload url:http://localhost/wp-content/uploads
+[2020-02-06 22:55:06][notice]old site prefix:wp_
+[2020-02-06 22:55:06][notice]Drop table if exist
+[2020-02-06 22:55:06][notice]Create table wp_cfs_sessions
+[2020-02-06 22:55:07][notice]Drop table if exist
+[2020-02-06 22:55:07][notice]Create table wp_cfs_values
+[2020-02-06 22:55:08][notice]Drop table if exist
+[2020-02-06 22:55:08][notice]Create table wp_commentmeta
+[2020-02-06 22:55:09][notice]Drop table if exist
+[2020-02-06 22:55:09][notice]Create table wp_comments
+[2020-02-06 22:55:12][notice]Drop table if exist
+[2020-02-06 22:55:12][notice]Create table wp_links
+[2020-02-06 22:55:14][notice]Drop table if exist
+[2020-02-06 22:55:14][notice]Create table wp_nf3_actions
+[2020-02-06 22:55:15][notice]Drop table if exist
+[2020-02-06 22:55:16][notice]Create table wp_nf3_action_meta
+[2020-02-06 22:55:22][notice]Drop table if exist
+[2020-02-06 22:55:22][notice]Create table wp_nf3_chunks
+[2020-02-06 22:55:22][notice]Drop table if exist
+[2020-02-06 22:55:23][notice]Create table wp_nf3_fields
+[2020-02-06 22:55:23][notice]Drop table if exist
+[2020-02-06 22:55:23][notice]Create table wp_nf3_field_meta
+[2020-02-06 22:55:40][notice]Drop table if exist
+[2020-02-06 22:55:40][notice]Create table wp_nf3_forms
+[2020-02-06 22:55:40][notice]Drop table if exist
+[2020-02-06 22:55:40][notice]Create table wp_nf3_form_meta
+[2020-02-06 22:55:46][notice]Drop table if exist
+[2020-02-06 22:55:47][notice]Create table wp_nf3_objects
+[2020-02-06 22:55:47][notice]Drop table if exist
+[2020-02-06 22:55:47][notice]Create table wp_nf3_object_meta
+[2020-02-06 22:55:47][notice]Drop table if exist
+[2020-02-06 22:55:48][notice]Create table wp_nf3_relationships
+[2020-02-06 22:55:48][notice]Drop table if exist
+[2020-02-06 22:55:48][notice]Create table wp_nf3_upgrades
+[2020-02-06 22:55:49][notice]Drop table if exist
+[2020-02-06 22:55:49][notice]Create table wp_options
+[2020-02-06 22:56:12][notice]Drop table if exist
+[2020-02-06 22:56:13][notice]Create table wp_postmeta
+[2020-02-06 23:02:48][notice]Drop table if exist
+[2020-02-06 23:02:48][notice]Create table wp_posts
+[2020-02-06 23:03:08][notice]Drop table if exist
+[2020-02-06 23:03:09][notice]Create table wp_termmeta
+[2020-02-06 23:03:10][notice]Drop table if exist
+[2020-02-06 23:03:10][notice]Create table wp_terms
+[2020-02-06 23:03:13][notice]Drop table if exist
+[2020-02-06 23:03:14][notice]Create table wp_term_relationships
+[2020-02-06 23:03:19][notice]Drop table if exist
+[2020-02-06 23:03:19][notice]Create table wp_term_taxonomy
+[2020-02-06 23:03:25][notice]Drop table if exist
+[2020-02-06 23:03:25][notice]Create table wp_usermeta
+[2020-02-06 23:03:32][notice]Drop table if exist
+[2020-02-06 23:03:32][notice]Create table wp_users
+[2020-02-06 23:03:33][notice]Drop table if exist
+[2020-02-06 23:03:33][notice]Create table wp_wc_admin_notes
+[2020-02-06 23:03:34][notice]Drop table if exist
+[2020-02-06 23:03:35][notice]Create table wp_wc_admin_note_actions
+[2020-02-06 23:03:36][notice]Drop table if exist
+[2020-02-06 23:03:37][notice]Create table wp_wc_category_lookup
+[2020-02-06 23:03:38][notice]Drop table if exist
+[2020-02-06 23:03:38][notice]Create table wp_wc_customer_lookup
+[2020-02-06 23:03:39][notice]Drop table if exist
+[2020-02-06 23:03:39][notice]Create table wp_wc_download_log
+[2020-02-06 23:03:40][notice]Drop table if exist
+[2020-02-06 23:03:41][notice]Create table wp_wc_order_coupon_lookup
+[2020-02-06 23:03:41][notice]Drop table if exist
+[2020-02-06 23:03:41][notice]Create table wp_wc_order_product_lookup
+[2020-02-06 23:03:42][notice]Drop table if exist
+[2020-02-06 23:03:42][notice]Create table wp_wc_order_stats
+[2020-02-06 23:03:43][notice]Drop table if exist
+[2020-02-06 23:03:43][notice]Create table wp_wc_order_tax_lookup
+[2020-02-06 23:03:44][notice]Drop table if exist
+[2020-02-06 23:03:44][notice]Create table wp_wc_product_meta_lookup
+[2020-02-06 23:03:45][notice]Drop table if exist
+[2020-02-06 23:03:46][notice]Create table wp_wc_tax_rate_classes
+[2020-02-06 23:03:47][notice]Drop table if exist
+[2020-02-06 23:03:48][notice]Create table wp_wc_webhooks
+[2020-02-06 23:03:49][notice]Drop table if exist
+[2020-02-06 23:03:49][notice]Create table wp_woocommerce_api_keys
+[2020-02-06 23:03:49][notice]Drop table if exist
+[2020-02-06 23:03:50][notice]Create table wp_woocommerce_attribute_taxonomies
+[2020-02-06 23:03:51][notice]Drop table if exist
+[2020-02-06 23:03:51][notice]Create table wp_woocommerce_downloadable_product_permissions
+[2020-02-06 23:03:53][notice]Drop table if exist
+[2020-02-06 23:03:53][notice]Create table wp_woocommerce_log
+[2020-02-06 23:03:54][notice]Drop table if exist
+[2020-02-06 23:03:54][notice]Create table wp_woocommerce_order_itemmeta
+[2020-02-06 23:03:55][notice]Drop table if exist
+[2020-02-06 23:03:55][notice]Create table wp_woocommerce_order_items
+[2020-02-06 23:03:56][notice]Drop table if exist
+[2020-02-06 23:03:56][notice]Create table wp_woocommerce_payment_tokenmeta
+[2020-02-06 23:03:57][notice]Drop table if exist
+[2020-02-06 23:03:57][notice]Create table wp_woocommerce_payment_tokens
+[2020-02-06 23:03:58][notice]Drop table if exist
+[2020-02-06 23:03:59][notice]Create table wp_woocommerce_sessions
+[2020-02-06 23:03:59][notice]Drop table if exist
+[2020-02-06 23:03:59][notice]Create table wp_woocommerce_shipping_zones
+[2020-02-06 23:04:00][notice]Drop table if exist
+[2020-02-06 23:04:01][notice]Create table wp_woocommerce_shipping_zone_locations
+[2020-02-06 23:04:02][notice]Drop table if exist
+[2020-02-06 23:04:03][notice]Create table wp_woocommerce_shipping_zone_methods
+[2020-02-06 23:04:03][notice]Drop table if exist
+[2020-02-06 23:04:03][notice]Create table wp_woocommerce_tax_rates
+[2020-02-06 23:04:04][notice]Drop table if exist
+[2020-02-06 23:04:04][notice]Create table wp_woocommerce_tax_rate_locations
+[2020-02-06 23:04:08][notice]Finished restoring localhost_wpvivid-5e3c9733a5de1_2020-02-06-22-46_backup_db.zip
+[2020-02-06 23:04:09][notice]Restore task completed.
+[2020-02-06 23:04:11][notice]disable maintenance mode
+[2020-02-06 23:04:11][notice]clean file:C:\Users\Xirt\Desktop\Projects\Look What the Cat Brought In\wordpress/wp-content\backups\localhost_wpvivid-5e3c9733a5de1_2020-02-06-22-46_backup_db.zip
