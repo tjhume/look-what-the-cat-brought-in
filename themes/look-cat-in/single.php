@@ -19,13 +19,13 @@ if('post' == get_post_type()){
 	<div><?php
 	while ( have_posts() ) :
 		the_post();
-		?><h2 class="post-title"><?php the_title(); ?></h2><p class="post-date">
+		?><h2 class="post-title"><?php the_title(); ?></h2><time class="post-date">
 		<?php if(get_field('use_custom_date')){
 			the_field('date');
 		}else{
 			the_date();
 		}?>
-		</p><?php
+		</time><?php
 		the_content();
 	endwhile;
 	?></div>

@@ -542,7 +542,7 @@ nav{
 	margin: 0;
 }
 #featured-cats-wrapper .featured-cat-box h2{
-	padding-top: 8px;
+	padding-top: 15px;
 	padding-bottom: 8px;
 	text-align: center;
 	font-weight: 400;
@@ -573,6 +573,8 @@ body.admin-bar #post-content{
 .post-date{
 	padding-left: 10px;
 	margin-top: 0px;
+	margin-bottom: 20px;
+	display: inline-block;
 }
 
 

@@ -147,13 +147,13 @@ $options_id = get_theme_options_id(); ?>
                     //Post Content ?>
                     <div id="latest-content">
                         <h2 class="post-title"><?php the_title(); ?></h2>
-                        <p class="post-date">
+                        <time class="post-date">
                         <?php if(get_field('use_custom_date')){
                             the_field('date');
                         }else{
                             the_date();
                         }?>
-                        </p>
+                        </time>
                         <?php the_content(); ?>
                     </div>
                 <?php endwhile; }else{ 
