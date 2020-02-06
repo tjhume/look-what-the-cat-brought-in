@@ -34,22 +34,23 @@ nav {width: 100%;height: 60px;background-color: #7ab8ff;position: fixed;top: 0;l
 #home-hero-social .hero-social-wrap .hero-social-icon img {display: block;width: 100%;height: 100%;}
 #about {background-color: rgba(122,184,255,.8);color: white;width: 100%;padding-top: 40px;}
 #about noscript {margin-bottom: 20px;}
-#about-tabs-wrapper, #about-display {width: 1100px;max-width: 90%;margin: 0 auto;}
+#about-tabs-wrapper, #about-display {max-width: 1100px;width: 90%;margin: 0 auto;}
 #about-tabs-wrapper {text-align: center;}
 #about-tabs {display: inline-block;list-style-type: none;margin-left: 0;margin-top: 0;margin-right: 0;margin-bottom: 30px;padding: 0;}
 #about-tabs li {display: inline-block;margin-left: 10px;margin-right: 10px;}
 #about-tabs li a.active {color: #ffe17d;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s;}
 #about-tabs li a {color: white;}
 #about-tabs li a:hover {color: #ffe17d;}
-#about-display {position: relative;display: table;min-height: 700px;}
+#about-display {position: relative;display: table;min-height: 750px;}
 #about-display .content {display: table-cell;vertical-align: middle;position: absolute;top: 0;left: 0;width: 100%;height: 100%;opacity: 0;padding-top: 30px;padding-bottom: 0px;max-height: 0px;overflow: hidden;}
 #about-display .content.active {position: static;opacity: 1;max-height: 9999px;padding-top: 0px;padding-bottom: 30px;-webkit-transition: opacity 1.3s;-o-transition: opacity 1.3s;transition: padding 1.3s,opacity 1.3s;}
 #about-display .content a {display: inline-block;color: #ffe17d;-webkit-transition-duration: .3s;-o-transition-duration: .3s;transition-duration: .3s;}
 #about-display .content a:hover {-webkit-transform: rotate(-4deg);-ms-transform: rotate(-4deg);transform: rotate(-4deg);}
+#about-display #who-we-are.content a.sponsor {-webkit-transform: rotate(0deg);-ms-transform: rotate(0deg);transform: rotate(0deg);}
 #about-display .content iframe {visibility: hidden;}
 #about-display .content.active iframe {visibility: visible;}
-#about-display .content h2 {margin-top: 0;}
-#about-display .text {float: left;width: 65%;padding-right: 10px;}
+#about-display .content h2 {margin-top: 0;text-align: center;font-size: 28px;margin-bottom: 30px;}
+#about-display .text {float: left;width: 65%;padding-left: 10px;}
 #about-display p {margin: 0;padding: 0;}
 #about-display p.list-heading {font-size: 18px;}
 #about-display hr {margin-bottom: 20px;margin-left: 0px;margin-right: 0px;width: 60%;height: 1px;background: white;}
@@ -58,9 +59,9 @@ nav {width: 100%;height: 60px;background-color: #7ab8ff;position: fixed;top: 0;l
 #about-display .right-list, #about-display .left-list {float: left;width: 50%;}
 #about-display .left-list {padding-right: 7px;}
 #about-display .right-list {padding-left: 7px;}
-#about-display .img {float: left;width: 35%;padding-left: 10px;}
-#about-display .content.right .text {float: right;padding-left: 10px;padding-right: 0px;}
-#about-display .content.right .img {float: right;padding-left: 0px;padding-right: 10px;}
+#about-display .img {float: left;width: 35%;padding-right: 10px;}
+#about-display .content.right .text {float: right;padding-left: 0px;padding-right: 10px;}
+#about-display .content.right .img {float: right;padding-left: 10px;padding-right: 0px;}
 #about-display img {display: block;max-width: 100%;margin: 0 auto;border-radius: 5px;-webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,.5);-moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,.5);box-shadow: 0px 3px 8px 0px rgba(0,0,0,.5);}
 #about-display #contact-us .text, #about-display #visit-us .text {width: 100%;float: none;}
 #about-display #contact-us h2 {width: 90%;margin-left: auto;margin-right: auto;}
@@ -70,8 +71,10 @@ nav {width: 100%;height: 60px;background-color: #7ab8ff;position: fixed;top: 0;l
 #about-display .wpcf7 input.wpcf7-submit {width: 100px;background-color: #ffe17d;text-align: center;color: #212529;margin: 0;cursor: pointer;font-size: 16px;border: none;outline: none;padding: 0;height: 32px;line-height: 32px;-webkit-transition: all .2s;-o-transition: all .2s;transition: all .2s;}
 #about-display .wpcf7 input.wpcf7-submit:hover {transform: scale(1.1);}
 #about-display .content h2.sponsors-heading {margin-top: 30px;text-align: center;}
-#about-display .sponsors {overflow: auto;}
-#about-display .sponsors img {float: left;margin-right: 20px;margin-bottom: 20px;background: white;height: 75px;width: auto;}
+#about-display .sponsors {text-align: center;}
+#about-display .sponsors a {display: inline-block;margin-right: 20px;margin-bottom: 20px;background: white;height: 75px;border: 1px solid #6b6b6b;border-radius: 10px;}
+#about-display .sponsors img {display: inline-block;height: 100%;width: auto;padding: 5px;}
+#about-display .sponsors-bottom-text {text-align: center;margin-top: 10px;margin-bottom: 10px;}
 #visit-hours .appointment {font-size: 14px;margin-bottom: 10px;}
 #visit-hours .hours {margin-bottom: 10px;}
 #what-we-do strong {display: inline-block;font-size: 18px;margin-bottom: 5px;margin-top: 18px;}
@@ -93,7 +96,15 @@ nav {width: 100%;height: 60px;background-color: #7ab8ff;position: fixed;top: 0;l
 body.admin-bar #post-content {margin-top: 92px;}
 #post-content {margin-top: 60px;margin-left: auto;margin-right: auto;width: 1000px;max-width: 90%;padding-top: 100px;}
 @media only screen and (max-width : 1200px) {#home-hero {height: auto !important;}
-	#home-hero-content {margin-top: 150px !important;margin-bottom: 150px !important;}}
-@media only screen and (max-width : 992px) {}
+	#home-hero-content {margin-top: 150px !important;margin-bottom: 150px !important;}
+	#about-display {min-height: 0px;padding-bottom: 50px;}
+	#about-display .content.active {padding-top: 15px;padding-bottom: 15px;}
+	#about-display .img, #about-display .text {float: none !important;padding: 0;}
+	#about-display .img {width: 100%;text-align: center;height: 200px;margin-bottom: 30px;}
+	#about-display .img img {height: 200px;width: auto;}
+	#about-display .text {width: 100%;}
+	#who-we-are .text {max-width: 600px;margin: 0 auto;}}
+@media only screen and (max-width : 992px) {#featured-cats-wrapper .featured-cat-box img {display: block;margin: 0 auto;max-width: 300px;text-align: center;}
+	#featured-cats-wrapper .featured-cat-box {float: none;width: 500px;max-width: 95%;margin-left: auto;margin-right: auto;margin-bottom: 50px;}}
 @media only screen and (max-width : 768px) {#home-hero-buttons .button {float: none;margin-left: auto;margin-right: auto;margin-bottom: 15px;}}
 @media only screen and (max-width : 480px) {}

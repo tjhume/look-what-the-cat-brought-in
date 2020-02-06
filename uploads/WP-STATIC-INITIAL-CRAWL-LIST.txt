@@ -186,6 +186,7 @@
 /wp-content/uploads\wc-logs\fatal-errors-2020-01-17-3e2e480b33dd3af9df9a16735a2415e1.log
 /wp-content/uploads\wc-logs\fatal-errors-2020-01-21-3e2e480b33dd3af9df9a16735a2415e1.log
 /wp-content/uploads\wc-logs\fatal-errors-2020-01-29-3e2e480b33dd3af9df9a16735a2415e1.log
+/wp-content/uploads\wc-logs\fatal-errors-2020-02-06-3e2e480b33dd3af9df9a16735a2415e1.log
 /wp-content/uploads\wc-logs\geolocation-2020-01-07-5e836d12ccf43e98d6eede32f0c7e449.log
 /wp-content/uploads\wc-logs\geolocation-2020-01-22-e2ed4fca21a068e6ce963230326566b8.log
 /wp-content/uploads\wc-logs\index.html
