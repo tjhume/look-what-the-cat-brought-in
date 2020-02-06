@@ -44,11 +44,8 @@ $options_id = get_theme_options_id(); ?>
             </ul>
         </div>
         <div id="about-display">
-            <div id="what-we-do" class="content active">
-                <div class="text">
-                    <h2>What we do</h2>
-                    <p><?php the_field('what_we_do_content'); ?></p>
-                </div>
+            <div id="what-we-do" class="content right active">
+            <h2>What we do</h2>
                 <?php
                     $image = get_field('what_we_do_image');
                     $alt = esc_attr($image['alt']);
@@ -57,11 +54,22 @@ $options_id = get_theme_options_id(); ?>
                 <div class="img">
                     <img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>">
                 </div>
+                <div class="text">
+                    <p><?php the_field('what_we_do_content'); ?></p>
+                </div>
                 <div class="clear"></div>
             </div>
-            <div id="who-we-are" class="content right">
+            <div id="who-we-are" class="content">
+                <h2>Who we are</h2>
+                <?php
+                    $image = get_field('who_we_are_image');
+                    $alt = esc_attr($image['alt']);
+                    $src = esc_url($image['url']);
+                ?>
+                <div class="img">
+                    <img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>">
+                </div>
                 <div class="text">
-                    <h2>Who we are</h2>
                     <div class="left-list">
                         <p class="list-heading"><?php the_field('who_we_are_column_1_title'); ?></p>
                         <hr>
@@ -83,19 +91,20 @@ $options_id = get_theme_options_id(); ?>
                     </div>
                     <div class="clear"></div>
                 </div>
-                <?php
-                    $image = get_field('who_we_are_image');
-                    $alt = esc_attr($image['alt']);
-                    $src = esc_url($image['url']);
-                ?>
-                <div class="img">
-                    <img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>">
-                </div>
                 <div class="clear"></div>
                 <h2 class="sponsors-heading">Our Sponsors</h2>
                 <div class="sponsors">
-                    <?php the_field('who_we_are_sponsors'); ?>
+                    <?php if(have_rows('who_we_are_sponsors_rep')): while(have_rows('who_we_are_sponsors_rep')):the_row(); 
+                        $image = get_sub_field('image');
+                        $alt = esc_attr($image['alt']);
+                        $src = esc_url($image['url']);
+                    ?>
+                        <a class="sponsor" href="<?php the_sub_field('link'); ?>" target="_blank"><img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>"></a>
+                    <?php endwhile; endif; ?>
                 </div>
+                <p class="sponsors-bottom-text">
+                    <?php the_field('who_we_are_bottom_text'); ?>
+                </p>
             </div>
             <div id="contact-us" class="content">
                 <div class="text">
