@@ -29,7 +29,7 @@ $options_id = get_theme_options_id(); ?>
             </div>
 
             <?php endwhile; ?>
-            
+            <div class="clear"></div>
             <div class="pagination">
                 <?php
                     echo paginate_links( array(
