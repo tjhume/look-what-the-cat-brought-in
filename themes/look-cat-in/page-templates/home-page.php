@@ -162,6 +162,7 @@ $options_id = get_theme_options_id(); ?>
                     <h2>No News Found</h2>
                     </div>
                 <?php }
+                wp_reset_postdata();
             ?>
         </div>
     </section>
@@ -169,22 +170,37 @@ $options_id = get_theme_options_id(); ?>
     <section id="featured-cats">
         <h1>Featured Cats</h1>
         <div id="featured-cats-wrapper">
+            <?php
+                $image = get_field('cat_1_image');
+                $alt = esc_attr($image['alt']);
+                $src = esc_url($image['url']);
+            ?>
             <div class="featured-cat-box">
-                <a href="#"><img src="http://localhost/wp-content/uploads/2020/02/Timmy.jpg" alt=""></a>
-                <h2>Timmy</h2>
-                <p>My name is Timmy I am a kitty and I am pretty and my brothers name is Melvin the Melon and I like pets and stuff</p>
+                <a href="/adopt"><img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>"></a>
+                <h2><?php the_field('cat_1_name'); ?></h2>
+                <p><?php the_field('cat_1_description'); ?></p>
+                <p><a href="/adopt">Learn More &rarr;</a></p>
+            </div>
+            <?php
+                $image = get_field('cat_2_image');
+                $alt = esc_attr($image['alt']);
+                $src = esc_url($image['url']);
+            ?>
+            <div class="featured-cat-box">
+                <a href="/adopt"><img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>"></a>
+                <h2><?php the_field('cat_2_name'); ?></h2>
+                <p><?php the_field('cat_2_description') ?></p>
                 <p><a href="">Learn More &rarr;</a></p>
             </div>
+            <?php
+                $image = get_field('cat_3_image');
+                $alt = esc_attr($image['alt']);
+                $src = esc_url($image['url']);
+            ?>
             <div class="featured-cat-box">
-                <a href="#"><img src="http://localhost/wp-content/uploads/2020/02/Timmy.jpg" alt=""></a>
-                <h2>Timmy</h2>
-                <p>My name is Timmy I am a kitty and I am pretty and my brothers name is Melvin the Melon and I like pets and stuff</p>
-                <p><a href="">Learn More &rarr;</a></p>
-            </div>
-            <div class="featured-cat-box">
-                <a href="#"><img src="http://localhost/wp-content/uploads/2020/02/Timmy.jpg" alt=""></a>
-                <h2>Timmy</h2>
-                <p>My name is Timmy I am a kitty and I am pretty and my brothers name is Melvin the Melon and I like pets and stuff</p>
+                <a href="/adopt"><img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>"></a>
+                <h2><?php the_field('cat_3_name'); ?></h2>
+                <p><?php the_field('cat_3_description'); ?></p>
                 <p><a href="">Learn More &rarr;</a></p>
             </div>
             <div class="clear"></div>
