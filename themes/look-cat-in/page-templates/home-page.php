@@ -5,7 +5,7 @@
 get_header(); 
 $options_id = get_theme_options_id(); ?>
 
-<div id="hero-background" style="background-image: url('<?php the_field('hero_background_image'); ?>')">
+<div id="hero-background" class="no-lazy-load" style="background-image: url('<?php the_field('hero_background_image'); ?>')">
 
     <section id="home-hero">
         <div class="cell-wrap">

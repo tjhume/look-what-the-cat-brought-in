@@ -9,7 +9,7 @@
  * @package Look_What_the_Cat_Brought_In
  */
 
- $options_id = get_theme_options_id();
+$options_id = get_theme_options_id();
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
