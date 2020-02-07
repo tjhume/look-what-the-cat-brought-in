@@ -1,0 +1,8 @@
+2020-02-07T04:52:19+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in C:\Users\TJ\Desktop\Look What the Cat Brought In\wordpress\wp-content\themes\look-cat-in\page-templates\news-page.php:22
+Stack trace:
+#0 C:\Users\TJ\Desktop\Look What the Cat Brought In\wordpress\wp-includes\template-loader.php(98): include()
+#1 C:\Users\TJ\Desktop\Look What the Cat Brought In\wordpress\wp-blog-header.php(19): require_once('C:\\Users\\TJ\\Des...')
+#2 C:\Users\TJ\Desktop\Look What the Cat Brought In\wordpress\index.php(17): require('C:\\Users\\TJ\\Des...')
+#3 {main}
+  thrown in C:\Users\TJ\Desktop\Look What the Cat Brought In\wordpress\wp-content\themes\look-cat-in\page-templates\news-page.php on line 22
+
