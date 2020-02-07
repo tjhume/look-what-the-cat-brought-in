@@ -51,6 +51,13 @@ noscript{
 p{
 	line-height: 1.2;
 }
+.title-line{
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+	color: #FFE17D;
+}
 
 
 
@@ -492,6 +499,7 @@ nav{
 
 
 /* Featured Cats */
+
 #featured-cats{
 	background-color: rgba(122, 184, 255, 0.8);
 	padding-top: 50px;
@@ -500,7 +508,7 @@ nav{
 }
 #featured-cats h1{
 	text-align: center;
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 }
 #featured-cats p>a{
 	color: #FFE17D;
@@ -551,7 +559,7 @@ nav{
 	padding-top: 15px;
 	padding-bottom: 8px;
 	text-align: center;
-	font-weight: 400;
+	font-weight: bold;
 }
 #featured-cats-wrapper .featured-cat-box p{
 	padding-bottom: 20px;

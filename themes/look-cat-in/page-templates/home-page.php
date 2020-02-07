@@ -46,7 +46,7 @@ $options_id = get_theme_options_id(); ?>
         </div>
         <div id="about-display">
             <div id="what-we-do" class="content right active">
-            <h2>What we do</h2>
+            <h2>WHAT WE DO</h2>
                 <?php
                     $image = get_field('what_we_do_image');
                     $alt = esc_attr($image['alt']);
@@ -61,7 +61,7 @@ $options_id = get_theme_options_id(); ?>
                 <div class="clear"></div>
             </div>
             <div id="who-we-are" class="content">
-                <h2>Who we are</h2>
+                <h2>WHO WE ARE</h2>
                 <?php
                     $image = get_field('who_we_are_image');
                     $alt = esc_attr($image['alt']);
@@ -93,7 +93,7 @@ $options_id = get_theme_options_id(); ?>
                     <div class="clear"></div>
                 </div>
                 <div class="clear"></div>
-                <h2 class="sponsors-heading">Our Sponsors</h2>
+                <h2 class="sponsors-heading">OUR SPONSORS</h2>
                 <div class="sponsors">
                     <?php if(have_rows('who_we_are_sponsors_rep')): while(have_rows('who_we_are_sponsors_rep')):the_row(); 
                         $image = get_sub_field('image');
@@ -109,14 +109,14 @@ $options_id = get_theme_options_id(); ?>
             </div>
             <div id="contact-us" class="content">
                 <div class="text">
-                    <h2>Contact Us</h2>
+                    <h2>CONTACT US</h2>
                     <?php echo do_shortcode('[contact-form-7 id="1091" title="Contact Form"]'); ?>
                 </div>
                 <div class="clear"></div>
             </div>
             <div id="visit-us" class="content right">
                 <div class="text">
-                    <h2>Visit Us</h2>
+                    <h2>VISIT US</h2>
                     <div id="visit-hours">
                         <div class="hours">
                             <?php the_field('visit_us_hours'); ?>
@@ -130,7 +130,7 @@ $options_id = get_theme_options_id(); ?>
     </section>
 
     <section id="latest-news">
-        <h1>Latest News</h1>
+        <h1>LATEST NEWS</h1>
         <hr>
         <div id="news-container">
             <?php
@@ -168,7 +168,8 @@ $options_id = get_theme_options_id(); ?>
     </section>
 
     <section id="featured-cats">
-        <h1>Featured Cats</h1>
+        <h1>FEATURED CATS</h1>
+        <hr class="title-line">
         <div id="featured-cats-wrapper">
             <?php
                 $image = get_field('cat_1_image');
