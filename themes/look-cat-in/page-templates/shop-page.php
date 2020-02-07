@@ -3,7 +3,7 @@
 * Template Name: Shop
 */
 get_header(); ?>
-<section id="shop">
+<section class="top" id="shop">
 
 </section>
 <?php

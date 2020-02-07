@@ -14,6 +14,12 @@ body.admin-bar{
 body.admin-bar nav{
 	top: 32px;
 }
+section.top{
+	margin-top: 60px;
+}
+body.admin-bar section.top{
+	margin-top: 92px;
+}
 h1, h2, h3, h4, h5, h6{
 	font-family: Rubik;
 }
@@ -555,9 +561,6 @@ nav{
 
 
 /*=== Posts ===*/
-body.admin-bar #post-content{
-	margin-top: 92px;
-}
 #post-content{
 	margin-top: 60px;
 	margin-left: auto;
@@ -576,6 +579,17 @@ body.admin-bar #post-content{
 	margin-bottom: 20px;
 	display: inline-block;
 }
+
+
+
+
+/*=== Adopt Page ===*/
+#adopt{
+	text-align: center;
+	font-size: 30px;
+	margin-top: 200px;
+}
+/*=== End Adopt Page ===*/
 
 
 
