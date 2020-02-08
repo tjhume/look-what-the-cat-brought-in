@@ -14,9 +14,9 @@ $options_id = get_theme_options_id(); ?>
                     <h1>GET INVOLVED</h1>
                     <div class="hero-buttons">
                         <div class="button-wrap">
-                            <a href="/#donate" class="button">Donate</a>
-                            <a href="/#volunteer" class="button">Volunteer</a>
-                            <a href="/#foster" class="button">Foster</a>
+                            <a href="#donate" class="button">Donate</a>
+                            <a href="#volunteer" class="button">Volunteer</a>
+                            <a href="#foster" class="button">Foster</a>
                             <div class="clear"></div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@ $options_id = get_theme_options_id(); ?>
         </section>
 
         <section id="donate" class="opacity">
-            
+
         </section>
 
     </div>

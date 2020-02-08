@@ -135,10 +135,10 @@ nav{
 	left: 0;
 	margin:0;
 	padding-left: 0;
+	padding-bottom: 5px;
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
 	background-color: #212529;
-	padding-bottom: 5px;
 	overflow: hidden;
 	-webkit-transform: scaleY(0);
 	-o-transform: scaleY(0);
@@ -161,15 +161,18 @@ nav{
 	transform: scaleY(1);
 }
 #menu-header-menu .sub-menu li{
-	height: 30px;
+	height: auto;
 	display: block;
-	line-height: 30px;
+	line-height: 1.1;
 	padding-left: 10px;
 	padding-right: 10px;
 	margin: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 #menu-header-menu .sub-menu li a{
 	color: white;
+	vertical-align: middle;
 }
 #menu-header-menu .sub-menu li a:hover{
 	color: #FFE17D;

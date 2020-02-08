@@ -27,9 +27,10 @@ jQuery(document).ready(function(){
         }
     });
 
-    //Hover effect for sub-menus
+    //Hover effect for sub-menus and correct positioning
     jQuery("#menu-header-menu .sub-menu").each(function(i, el){
         var setTimeoutConst;
+        //Hover effect
         jQuery(el).closest("li").hover(function(){
             setTimeoutConst = setTimeout(function(){
                 jQuery(el).addClass("expand");
@@ -38,6 +39,11 @@ jQuery(document).ready(function(){
             clearTimeout(setTimeoutConst);
             jQuery(el).removeClass("expand");
         });
+        //Center dropdowns
+        var parentWidth = jQuery(el).closest("li").innerWidth();
+        var width = jQuery(el).innerWidth();
+        var left = (parentWidth - width) / 2;
+        jQuery(el).css("left", left);
     });
 });
 
