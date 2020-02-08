@@ -35,6 +35,11 @@ $options_id = get_theme_options_id();
 					));
 				?>
 			</div>
+			<div class="hamburger hamburger--squeeze js-hamburger">
+				<div class="hamburger-box">
+					<div class="hamburger-inner"></div>
+				</div>
+			</div>
 			<div class="clear"></div>
 		</nav>
 	</header>

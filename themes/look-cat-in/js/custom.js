@@ -1,12 +1,31 @@
 jQuery(document).ready(function(){
+
     //Sets a static height for phones & tablets (fallback for CSS which has !important)
     if(window.mobileAndTabletcheck()){
-        jQuery("#home-hero").css("height", "auto");
-        jQuery("#home-hero-content").css({
-            "margin-top": "150px",
-            "margin-bottom": "150px"
-        });
+        if(jQuery(".hero").length){
+            jQuery("section.opacity").css("background-color", "rgb(122, 184, 255)");
+            jQuery(".hero-background").css("background-image", "none");
+            jQuery(".hero").css({
+                "height": "auto",
+                "background-attachment": "scroll",
+                "background-position": "center center"
+            });
+            jQuery(".hero-content").css({
+                "margin-top": "150px",
+                "margin-bottom": "150px"
+            });
+        }
     }
+
+    //Hamburger click on nav
+    jQuery(".hamburger").click(function(){
+        jQuery(this).toggleClass("is-active");
+        if(jQuery(this).hasClass("is-active")){
+            jQuery("#menu-header-menu").addClass("expand");
+        }else{
+            jQuery("#menu-header-menu").removeClass("expand");
+        }
+    });
 });
 
 //Functions

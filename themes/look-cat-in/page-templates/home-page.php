@@ -5,14 +5,14 @@
 get_header(); 
 $options_id = get_theme_options_id(); ?>
 
-<div id="hero-background" class="no-lazy-load" style="background-image: url('<?php the_field('hero_background_image'); ?>')">
+<div class="hero-background" class="no-lazy-load" style="background-image: url('<?php the_field('hero_background_image'); ?>')">
 
-    <section id="home-hero">
+    <section class="hero" style="background-image: url('<?php the_field('hero_background_image'); ?>')">
         <div class="cell-wrap">
-            <div id="home-hero-content">
+            <div class="hero-content">
                 <img src="<?php the_field('hero_image'); ?>" alt="Look What the Cat Brought In">
                 <h1><?php the_field('hero_title'); ?></h1>
-                <div id="home-hero-buttons">
+                <div class="hero-buttons">
                     <div class="button-wrap">
                         <?php if(have_rows('hero_buttons')): while(have_rows('hero_buttons')):the_row(); ?>
                             <a href="<?php the_sub_field('button_link'); ?>" class="button"><?php the_sub_field('button_text'); ?></a>
@@ -22,7 +22,7 @@ $options_id = get_theme_options_id(); ?>
                 </div>
             </div>
         </div>
-        <div id="home-hero-social">
+        <div class="hero-social">
             <div class="hero-social-wrap">
                 <?php if(have_rows('hero_social_icons')): while(have_rows('hero_social_icons')):the_row(); 
                     $image = get_sub_field('image');
@@ -37,7 +37,7 @@ $options_id = get_theme_options_id(); ?>
         </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="opacity">
         <div id="about-tabs-wrapper">
             <noscript>Please enable JavaScript to use these tabs!</noscript>
             <ul id="about-tabs">
@@ -167,7 +167,7 @@ $options_id = get_theme_options_id(); ?>
         </div>
     </section>
 
-    <section id="featured-cats">
+    <section id="featured-cats" class="opacity">
         <h1>FEATURED CATS</h1>
         <hr class="title-line">
         <div id="featured-cats-wrapper">
