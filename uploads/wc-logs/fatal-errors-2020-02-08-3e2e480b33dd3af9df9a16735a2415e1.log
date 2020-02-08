@@ -1,0 +1,8 @@
+2020-02-08T18:33:47+00:00 CRITICAL Uncaught Error: Call to undefined function get_title() in C:\Users\Xirt\Desktop\Projects\Look What the Cat Brought In\wordpress\wp-content\themes\look-cat-in\page-templates\news-page.php:30
+Stack trace:
+#0 C:\Users\Xirt\Desktop\Projects\Look What the Cat Brought In\wordpress\wp-includes\template-loader.php(98): include()
+#1 C:\Users\Xirt\Desktop\Projects\Look What the Cat Brought In\wordpress\wp-blog-header.php(19): require_once('C:\\Users\\Xirt\\D...')
+#2 C:\Users\Xirt\Desktop\Projects\Look What the Cat Brought In\wordpress\index.php(17): require('C:\\Users\\Xirt\\D...')
+#3 {main}
+  thrown in C:\Users\Xirt\Desktop\Projects\Look What the Cat Brought In\wordpress\wp-content\themes\look-cat-in\page-templates\news-page.php on line 30
+
