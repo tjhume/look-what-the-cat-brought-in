@@ -26,6 +26,19 @@ jQuery(document).ready(function(){
             jQuery("#menu-header-menu").removeClass("expand");
         }
     });
+
+    //Hover effect for sub-menus
+    jQuery("#menu-header-menu .sub-menu").each(function(i, el){
+        var setTimeoutConst;
+        jQuery(el).closest("li").hover(function(){
+            setTimeoutConst = setTimeout(function(){
+                jQuery(el).addClass("expand");
+              }, 300);
+        }, function(){
+            clearTimeout(setTimeoutConst);
+            jQuery(el).removeClass("expand");
+        });
+    });
 });
 
 //Functions

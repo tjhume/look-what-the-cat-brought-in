@@ -115,6 +115,7 @@ nav{
 	margin-right: 10px;
 	height: 100%;
 	line-height: 60px;
+	position: relative;
 }
 #menu-header-menu li a{
 	color: white;
@@ -126,6 +127,51 @@ nav{
 	color: #FFE17D;
 }
 #menu-header-menu li.current-menu-item a{
+	color: #FFE17D;
+}
+#menu-header-menu .sub-menu{
+	position: absolute;
+	top: 50px;
+	left: 0;
+	margin:0;
+	padding-left: 0;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background-color: #212529;
+	padding-bottom: 5px;
+	overflow: hidden;
+	-webkit-transform: scaleY(0);
+	-o-transform: scaleY(0);
+	-ms-transform: scaleY(0);
+	transform: scaleY(0);
+	-webkit-transform-origin: top;
+	-o-transform-origin: top;
+	-ms-transform-origin: top;
+	transform-origin: top;
+	-webkit-transition: -webkit-transform 0.3s ease;
+	transition: -webkit-transform 0.3s ease;
+	-o-transition: transform 0.3s ease;
+	transition: transform 0.3s ease;
+	transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+#menu-header-menu .sub-menu.expand{
+	-webkit-transform: scaleY(1);
+	-o-transform: scaleY(1);
+	-ms-transform: scaleY(1);
+	transform: scaleY(1);
+}
+#menu-header-menu .sub-menu li{
+	height: 30px;
+	display: block;
+	line-height: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0;
+}
+#menu-header-menu .sub-menu li a{
+	color: white;
+}
+#menu-header-menu .sub-menu li a:hover{
 	color: #FFE17D;
 }
 .hamburger{
@@ -799,7 +845,6 @@ nav{
 		-o-transform: scaleY(1);
 		-ms-transform: scaleY(1);
 		transform: scaleY(1);
-		max-height: 500px;
 	}
 	#menu-header-menu li{
 		display: block;

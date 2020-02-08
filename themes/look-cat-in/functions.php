@@ -149,6 +149,20 @@ function cat_get_first_image(){
 }
 
 /**
+ * Use relative site URL token in custom menu links
+ */
+function menu_token_replace($items) {
+	$url = get_site_url();
+	$url = str_replace('https://', '', $url);
+	$url = str_replace('http://', '', $url);
+  	foreach($items as $item) {
+		$item->url = (strpos($item->url, '%SITE%') !== false ) ? str_replace('%SITE%', $url, $item->url) : $item->url;
+  	}
+	return $items;
+}
+add_filter('wp_nav_menu_objects', 'menu_token_replace');
+
+/**
  * Removes HTML Spacing above WP Admin Bar
  */
 function remove_admin_login_header(){

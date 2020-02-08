@@ -6,9 +6,9 @@ get_header();
 $options_id = get_theme_options_id(); ?>
 
 <div id="get-involved">
-    <div class="hero-background" class="no-lazy-load" style="background-image: url('http://localhost/wp-content/uploads/2020/02/get-involved-hero.jpg')">
+    <div class="hero-background" class="no-lazy-load" style="background-image: url('../wp-content/uploads/2020/02/get-involved-hero.jpg')">
         
-        <section class="hero">
+        <section class="hero" style="background-image: url('../wp-content/uploads/2020/02/get-involved-hero.jpg')">
             <div class="cell-wrap">
                 <div class="hero-content">
                     <h1>GET INVOLVED</h1>
@@ -35,6 +35,10 @@ $options_id = get_theme_options_id(); ?>
                     <div class="clear"></div>
                 </div>
             </div>
+        </section>
+
+        <section id="donate" class="opacity">
+            
         </section>
 
     </div>
