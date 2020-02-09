@@ -6,7 +6,7 @@ get_header();
 $options_id = get_theme_options_id(); ?>
 
 <div id="get-involved">
-    <div class="hero-background" class="no-lazy-load" style="background-image: url('../wp-content/uploads/2020/02/get-involved-hero.jpg')">
+    <div class="hero-background" style="background-image: url('../wp-content/uploads/2020/02/get-involved-hero.jpg')">
         
         <section class="hero" style="background-image: url('../wp-content/uploads/2020/02/get-involved-hero.jpg')">
             <div class="cell-wrap">
@@ -24,7 +24,7 @@ $options_id = get_theme_options_id(); ?>
             </div>
             <div class="hero-social">
                 <div class="hero-social-wrap">
-                    <?php if(have_rows('hero_social_icons', 965)): while(have_rows('hero_social_icons', 965)):the_row(); 
+                    <?php if(have_rows('social_icons', $options_id)): while(have_rows('social_icons', $options_id)):the_row(); 
                         $image = get_sub_field('image');
                         $alt = esc_attr($image['alt']);
                         $src = esc_url($image['url']);
@@ -37,8 +37,73 @@ $options_id = get_theme_options_id(); ?>
             </div>
         </section>
 
-        <section id="donate" class="opacity">
+        <section id="donate">
+            <h1>DONATE</h1>
+            <div class="content">
+                <p>We are a 501(c)(3) organization so your contributions are tax deductible and there are many ways you can make a donation. Our cats sincerely thank you for giving them a second chance.</p>
+                <div class="donate-row">
+                    <div class="donate-box">
+                        <a href="#" class="box-content">
 
+                        </a>
+                    </div>
+                    <div class="donate-box">
+                        <a href="#" class="box-content">
+
+                        </a>
+                    </div>
+                    <div class="donate-box">
+                        <a href="#" class="box-content">
+
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="donate-row">
+                    <div class="donate-box">
+                        <a href="#" class="box-content">
+
+                        </a>
+                    </div>
+                    <div class="donate-box">
+                        <a href="#" class="box-content">
+
+                        </a>
+                    </div>
+                    <div class="donate-box">
+                        <a href="#" class="box-content">
+
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="donate-row">
+                    <div class="donate-box">
+                        <a href="#" class="box-content">
+
+                        </a>
+                    </div>
+                    <div class="donate-box">
+                        <a href="#" class="box-content">
+
+                        </a>
+                    </div>
+                    <div class="donate-box">
+                        <a href="#" class="box-content">
+
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="volunteer" class="opacity">
+            <h1>VOLUNTEER</h1>
+        </section>
+
+        <section id="foster">
+            <h1>FOSTER</h1>
         </section>
 
     </div>

@@ -5,7 +5,7 @@
 get_header(); 
 $options_id = get_theme_options_id(); ?>
 
-<div class="hero-background" class="no-lazy-load" style="background-image: url('<?php the_field('hero_background_image'); ?>')">
+<div class="hero-background" style="background-image: url('<?php the_field('hero_background_image'); ?>')">
 
     <section class="hero" style="background-image: url('<?php the_field('hero_background_image'); ?>')">
         <div class="cell-wrap">
@@ -24,7 +24,7 @@ $options_id = get_theme_options_id(); ?>
         </div>
         <div class="hero-social">
             <div class="hero-social-wrap">
-                <?php if(have_rows('hero_social_icons')): while(have_rows('hero_social_icons')):the_row(); 
+                <?php if(have_rows('social_icons', $options_id)): while(have_rows('social_icons', $options_id)):the_row(); 
                     $image = get_sub_field('image');
                     $alt = esc_attr($image['alt']);
                     $src = esc_url($image['url']);
@@ -165,6 +165,7 @@ $options_id = get_theme_options_id(); ?>
                 wp_reset_postdata();
             ?>
         </div>
+        <a href="/news" id="more-news">More News</a>
     </section>
 
     <section id="featured-cats" class="opacity">

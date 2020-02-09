@@ -25,10 +25,11 @@ if ( ! function_exists( 'look_cat_in_setup' ) ) :
 		 */
 		add_theme_support( 'title-tag' );
 
-		// This theme uses wp_nav_menu() in one location.
+		//Register nav and footer menus
 		register_nav_menus( array(
 			'primary' => esc_html__( 'Primary', 'look-cat-in' ),
-		) );
+			'footer' => esc_html__( 'Footer', 'look-cat-in' )
+		));
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'look_cat_in_custom_background_args', array(
