@@ -1,6 +1,6 @@
 jQuery(document).ready(function(){
 
-    //Sets a static height for phones & tablets (fallback for CSS which has !important)
+    //Sets a static height for phones & tablets (fallback for CSS which has !important) fix?
     if(window.mobileAndTabletcheck()){
         if(jQuery(".hero").length){
             jQuery("section.opacity").css("background-color", "rgb(122, 184, 255)");
