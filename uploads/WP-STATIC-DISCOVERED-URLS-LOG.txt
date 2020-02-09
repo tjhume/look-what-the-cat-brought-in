@@ -1,12 +1,15 @@
 /
+/adopt/
 /cart/
 /category/uncategorized/feed/
 /elementor-1218/
 /elementor-1218/feed/
+/get-involved/
 /indy-give-campaign-ends-on-december-31/
 /indy-give-campaign-ends-on-december-31/feed/
 /my-account/
 /my-account/lost-password/
+/news/
 /product-category/uncategorized/feed/
 /product/example-product-copy/
 /product/example-product-copy/feed/
