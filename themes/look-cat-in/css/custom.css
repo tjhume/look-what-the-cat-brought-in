@@ -225,11 +225,12 @@ footer .content{
 footer .footer-box{
 	display: table-cell;
 	vertical-align: bottom;
-	width: 33.33%;
+	width: 40%;
 	padding-bottom: 30px;
 }
-footer .middle{
+footer .footer-box.middle{
 	text-align: center;
+	width: 20%;
 }
 footer .right{
 	text-align: right;
@@ -238,11 +239,13 @@ footer .social-icons{
 	margin-bottom: 20px;
 }
 footer .social-icon{
-	display: block;
-	float: left;
+	display: inline-block;
 	width: 32px;
 	height: 32px;
 	margin-right: 10px;
+}
+footer .social-icon.last{
+	margin-right: 0px;
 }
 footer .social-icon img{
 	width: 100%;
@@ -930,6 +933,30 @@ footer #menu-footer-menu li a:hover{
 	/* General */
 	section.opacity{
 		background-color: rgb(122, 184, 255);
+	}
+
+	/* Footer */
+	footer{
+		height: auto;
+	}
+	footer .content{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	footer .footer-box{
+		display: block;
+		text-align: center;
+		width: 90%;
+		margin: 0 auto;
+	}
+	footer .footer-box.middle{
+		width: 90%;
+	}
+	footer .footer-box.right{
+		text-align: center;
+	}
+	footer .social-icons{
+		margin-top: 30px;
 	}
 
 	/* Hero */
