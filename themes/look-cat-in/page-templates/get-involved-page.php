@@ -43,59 +43,81 @@ $options_id = get_theme_options_id(); ?>
                 <p>We are a 501(c)(3) organization so your contributions are tax deductible and there are many ways you can make a donation. Our cats sincerely thank you for giving them a second chance.</p>
                 <div class="donate-row">
                     <div class="donate-box">
-                        <a href="#" class="box-content">
-
+                        <a href="http://smile.amazon.com/ch/26-2397025" class="box-content" target="_blank">
+                            <div class="box-table">
+                                <div class="overlay">
+                                    <div class="box-table">
+                                        <div class="box-cell overlay-content">
+                                            <span>Have an Amazon account? Support us through Amazon Smile!</span>
+                                            <div class="action">Shop</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-cell">
+                                    <img src="../wp-content/uploads/2020/02/amazon-smile.jpg" alt="Amazon Smile">
+                                </div>
+                            </div>
                         </a>
                     </div>
                     <div class="donate-box">
-                        <a href="#" class="box-content">
-
+                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=H3DDTGMXPR5CJ" class="box-content" target="_blank">
+                            <div class="box-table">
+                                <div class="overlay">
+                                    <div class="box-table">
+                                        <div class="box-cell overlay-content">
+                                            <span>Give an old-fashioned cash donation through PayPal.</span>
+                                            <div class="action">Donate</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-cell">
+                                    <img src="../wp-content/uploads/2020/02/paypal.jpg" alt="PayPal">
+                                </div>
+                            </div>
                         </a>
                     </div>
                     <div class="donate-box">
-                        <a href="#" class="box-content">
-
+                        <a href="https://engage.ppunitedway.org/comm/ArticleArchive.jsp?ArticleType=ShoppingPages#AgencySearchSection" class="box-content" target="_blank">
+                            <div class="box-table">
+                                <div class="overlay">
+                                    <div class="box-table">
+                                        <div class="box-cell overlay-content">
+                                            <span>Pikes Peak United Way is another way to directly donate to us.</span>
+                                            <div class="note">Search "Look What the Cat Brought In" at the bottom of the page, click the "Donate $100" button, then scroll up and click "View Cart." The total can be changed in the cart.</div>
+                                            <div class="action">Donate</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-cell">
+                                    <img src="../wp-content/uploads/2020/02/united-way.jpg" alt="Pikes Peak United Way">
+                                </div>
+                            </div>
                         </a>
                     </div>
                     <div class="clear"></div>
                 </div>
+
+
                 <div class="donate-row">
                     <div class="donate-box">
-                        <a href="#" class="box-content">
-
-                        </a>
-                    </div>
-                    <div class="donate-box">
-                        <a href="#" class="box-content">
-
-                        </a>
-                    </div>
-                    <div class="donate-box">
-                        <a href="#" class="box-content">
-
-                        </a>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-                <div class="donate-row">
-                    <div class="donate-box">
-                        <a href="#" class="box-content">
-
-                        </a>
-                    </div>
-                    <div class="donate-box">
-                        <a href="#" class="box-content">
-
-                        </a>
-                    </div>
-                    <div class="donate-box">
-                        <a href="#" class="box-content">
-
+                    <a href="https://www.pointworthy.com/view/shownpo.xhtml?product=2210563830833035" class="box-content" target="_blank">
+                            <div class="box-table">
+                                <div class="overlay">
+                                    <div class="box-table">
+                                        <div class="box-cell overlay-content">
+                                            <span>Do you have a rewards or loyalty card from a merchant or airline? You can donate your points to us and they will translate into money for our shelter.</span>
+                                            <div class="action">Donate</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-cell">
+                                    <img src="../wp-content/uploads/2020/02/point-worthy.jpg" alt="Point Worthy">
+                                </div>
+                            </div>
                         </a>
                     </div>
                     <div class="clear"></div>
                 </div>
-            </div>
         </section>
 
         <section id="volunteer" class="opacity">

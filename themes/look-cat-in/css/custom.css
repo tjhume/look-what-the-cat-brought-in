@@ -810,6 +810,57 @@ footer #menu-footer-menu li a:hover{
 #get-involved .box-content:hover{
 	border: 4px solid #7AB8FF;
 }
+.box-content .box-table{
+	display: table;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.box-content .box-cell{
+	display: table-cell;
+	width: 100%;
+	vertical-align: middle;
+}
+#get-involved .box-content img{
+	width: 90%;
+	display: block;
+	margin: 0 auto;
+}
+.box-content .overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	height: 100%;
+	width: 100%;
+	-webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	background-color: white;
+}
+.box-content:hover .overlay{
+	opacity: 1;
+}
+.box-content .overlay-content{
+	text-align: center;
+}
+.box-content .overlay-content span{
+	display: inline-block;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+.box-content .overlay-content .note{
+	font-size: 12px;
+	line-height: 1;
+	margin-top: 10px;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+.box-content .overlay-content .action{
+	color: #7AB8FF;
+	font-size: 24px;
+	margin-top: 20px;
+}
 /*=== Get Involved Page ===*/
 
 

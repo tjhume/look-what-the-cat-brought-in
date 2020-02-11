@@ -192,7 +192,7 @@ $options_id = get_theme_options_id(); ?>
                 <a href="/adopt"><img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>"></a>
                 <h2><?php the_field('cat_2_name'); ?></h2>
                 <p><?php the_field('cat_2_description') ?></p>
-                <p><a href="">Learn More &rarr;</a></p>
+                <p><a href="/adopt">Learn More &rarr;</a></p>
             </div>
             <?php
                 $image = get_field('cat_3_image');
@@ -203,7 +203,7 @@ $options_id = get_theme_options_id(); ?>
                 <a href="/adopt"><img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>"></a>
                 <h2><?php the_field('cat_3_name'); ?></h2>
                 <p><?php the_field('cat_3_description'); ?></p>
-                <p><a href="">Learn More &rarr;</a></p>
+                <p><a href="/adopt">Learn More &rarr;</a></p>
             </div>
             <div class="clear"></div>
         </div>
