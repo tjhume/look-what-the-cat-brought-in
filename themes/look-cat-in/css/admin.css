@@ -2,7 +2,8 @@
 .post-type-cfs .subsubsub li:last-child,
 #c2c,
 #footer-thankyou,
-.acf-column-2{
+.acf-column-2,
+li#menu-comments{
 	display: none;
 }
 

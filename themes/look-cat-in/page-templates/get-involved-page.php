@@ -118,6 +118,26 @@ $options_id = get_theme_options_id(); ?>
                     </div>
                     <div class="clear"></div>
                 </div>
+
+                <h1>Wish List</h1>
+                <div class="content wish-list">
+                    <p>Monetary donations are preferred, but Look What the Cat Brought in also appreciates donations of goods. These are our current needs:</p>
+                    <ul>
+                        <li>Towels</li>
+                        <li>Paper towels</li>
+                        <li>Trash bags</li>
+                        <li>Batteries - triple A, double A, D</li>
+                        <li>Laundry detergent - any</li>
+                        <li>Liquid hand soap</li>
+                        <li>Dishwashing gloves</li>
+                        <li>Cat carriers - in good repair</li>
+                        <li>Cat Beds</li>
+                        <li>Small cat trees (for individual cats)</li>
+                        <li>A working laptop</li>
+                        <li>A sandwich board sign</li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
         </section>
 
         <section id="volunteer" class="opacity">

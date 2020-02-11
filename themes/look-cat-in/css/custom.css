@@ -790,6 +790,7 @@ footer #menu-footer-menu li a:hover{
 }
 #get-involved .content{
 	width: 1100px;
+	max-width: 90%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -860,6 +861,26 @@ footer #menu-footer-menu li a:hover{
 	color: #7AB8FF;
 	font-size: 24px;
 	margin-top: 20px;
+}
+#get-involved .wish-list{
+	padding-bottom: 50px;
+}
+#get-involved .wish-list p{
+	text-align: center;
+	margin-top: 16px;
+	margin-bottom: 24px;
+}
+#get-involved .wish-list ul{
+	margin: 0 auto;
+	padding: 0;
+	width: 600px;
+}
+#get-involved .wish-list li{
+	width: 50%;
+	display: block;
+	float: left;
+	text-align: center;
+	list-style-type: none;
 }
 /*=== Get Involved Page ===*/
 
@@ -1055,6 +1076,11 @@ footer #menu-footer-menu li a:hover{
 		max-width: 600px;
 		margin: 0 auto;
 	}
+
+	/* Get Involved */
+	#get-involved .box-content{
+		height: 250px;
+	}
 }
 
 /* Medium Devices, Desktops */
@@ -1130,6 +1156,19 @@ footer #menu-footer-menu li a:hover{
 		margin-right: auto;
 		margin-bottom: 50px;
 	}
+
+	/* Get Involved */
+	#get-involved .donate-row{
+		margin-bottom: 0;
+	}
+	#get-involved .donate-box{
+		width: 300px;
+		padding: 0;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px;
+		float: none;
+	}
 }
 
 /* Small Devices, Tablets */
@@ -1150,6 +1189,19 @@ footer #menu-footer-menu li a:hover{
 	.hero-buttons .button{
 		line-height: 40px;
 		font-size: 16px;
+	}
+
+	/* Get Involved */
+	#get-involved .content{
+		min-width: 300px;
+	}
+	#get-involved .wish-list ul{
+		width: 300px;
+		max-width: 100%;
+	}
+	#get-involved .wish-list li{
+		float: none;
+		width: 100%;
 	}
 }
 
