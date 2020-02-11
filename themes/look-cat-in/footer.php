@@ -13,15 +13,17 @@ $options_id = get_theme_options_id();
     <div class="content">
         <div class="footer-box">
             <div class="social-icons">
-                <?php if(have_rows('social_icons', $options_id)): while(have_rows('social_icons', $options_id)):the_row(); 
+                <?php
+                $i = 1;
+                $rowCount = count(get_field('social_icons', $options_id));
+                if(have_rows('social_icons', $options_id)): while(have_rows('social_icons', $options_id)):the_row(); 
                     $image = get_sub_field('image');
                     $alt = esc_attr($image['alt']);
                     $src = esc_url($image['url']);
                     $link = get_sub_field('link'); ?>
 
-                    <a href="<?php echo $link; ?>" class="social-icon" target="_blank"><img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>"></a>
-                <?php endwhile; endif; ?>
-                <div class="clear"></div>
+                    <a href="<?php echo $link; ?>" class="social-icon<?php if($i == $rowCount){echo ' last';} ?>" target="_blank"><img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>"></a>
+                <?php $i++; endwhile; endif; ?>
             </div>
             <div>&copy; <?php echo date('Y'); ?> - Look What the Cat Brought In Cat Rescue and Shelter</div>
         </div>
