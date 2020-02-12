@@ -909,6 +909,21 @@ footer #menu-footer-menu li a:hover{
 	margin-left: auto;
 	margin-right: auto;
 }
+#application .left{
+	float: left;
+	width: 25%;
+}
+#application .right{
+	float: left;
+	width: 75%;
+}
+#application strong{
+	color: #FFE17D;
+	font-weight: bold;
+}
+#adoptable-cats p{
+	text-align: center;
+}
 /*=== End Adopt Page ===*/
 
 
