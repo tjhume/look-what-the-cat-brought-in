@@ -45,7 +45,19 @@ jQuery(document).ready(function(){
         var left = (parentWidth - width) / 2;
         jQuery(el).css("left", left);
     });
+
+    //Fix for stuttering background in IE
+    if(navigator.userAgent.match(/Trident\/7\./)) {
+        document.body.addEventListener("mousewheel", function() {
+        event.preventDefault();
+        var wd = event.wheelDelta;
+        var csp = window.pageYOffset;
+        window.scrollTo(0, csp - wd);
+        });
+    }
+
 });
+
 
 //Functions
 
