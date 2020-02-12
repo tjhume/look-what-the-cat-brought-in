@@ -37,15 +37,15 @@ $options_id = get_theme_options_id(); ?>
             </div>
         </section>
 
-        <section id="information" class="opacity">
-            <h1>INFORMATION</h1>
+        <section id="information">
+            <h1>ADOPTION INFORMATION</h1>
         </section>
 
-        <section id="application">
+        <section id="application" class="opacity">
             <h1>APPLICATION</h1>
         </section>
 
-        <section id="adoptable-cats" class="opacity">
+        <section id="adoptable-cats">
             <h1>ADOPTABLE CATS</h1>
         </section>
 
