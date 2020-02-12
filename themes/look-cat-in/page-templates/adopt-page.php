@@ -39,6 +39,9 @@ $options_id = get_theme_options_id(); ?>
 
         <section id="information">
             <h1>ADOPTION INFORMATION</h1>
+            <div class="content">
+                
+            </div>
         </section>
 
         <section id="application" class="opacity">

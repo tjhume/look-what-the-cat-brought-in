@@ -142,10 +142,16 @@ $options_id = get_theme_options_id(); ?>
 
         <section id="volunteer" class="opacity">
             <h1>VOLUNTEER</h1>
+            <div class="content">
+                <p>If you’re looking for a way to help out local cats in need, please consider volunteering at Look What The Cat Brought In. We need volunteers to help clean, feed, and water the cats on a daily basis. Throughout the year we have special events and a few extra hands to both transport the animals and staff the events is always helpful. Love cats but looking for something a little less “hands-on?” We always have a need for volunteers with basic office skills to help keep track of all our cats up for adoption.</p>
+            </div>
         </section>
 
         <section id="foster">
             <h1>FOSTER</h1>
+            <div class="content">
+                <p>If you have a place in your heart and home for kitties-but you’re not prepared to adopt—consider fostering for us. You’ll make a life-changing difference to one of our homeless kitties by taking them into your home on a temporary basis until they are ready for adoption.</p>
+            </div>
         </section>
 
     </div>

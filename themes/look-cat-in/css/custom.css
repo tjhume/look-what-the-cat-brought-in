@@ -773,13 +773,7 @@ footer #menu-footer-menu li a:hover{
 #get-involved .opacity{
 	color: white;
 }
-#get-involved #volunteer,
-#get-involved #foster{
-	padding-top: 50px;
-	padding-bottom: 50px;
-	height: 500px;
-}
-#get-involved #donate{
+#get-involved section{
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
