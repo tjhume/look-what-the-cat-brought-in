@@ -40,7 +40,29 @@ $options_id = get_theme_options_id(); ?>
         <section id="information">
             <h1>ADOPTION INFORMATION</h1>
             <div class="content">
-                
+                <div class="adopt-row">
+                    <div class="adopt-box">
+                        <div class="adopt-box-content">
+                            <div class="adopt-overlay">
+                                $75
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adopt-box">
+                        <div class="adopt-box-content">
+                            <div class="adopt-overlay">
+                                $125
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adopt-box">
+                        <div class="adopt-box-content">
+                            <div class="adopt-overlay">
+                                $100
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
