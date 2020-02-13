@@ -195,3 +195,13 @@ function remove_add_to_cart_buttons(){
 	remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
   }
 }
+
+/**
+ * Remove SKUs
+ */
+add_filter( 'wc_product_sku_enabled', '__return_false' );
+
+/**
+ * Remove related products
+ */
+add_filter('woocommerce_product_related_posts_query', '__return_empty_array', 100);

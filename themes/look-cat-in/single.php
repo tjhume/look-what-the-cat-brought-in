@@ -12,8 +12,7 @@ get_header();
 
 <?php
 //Custom view for default posts
-if('post' == get_post_type()){
-?>
+if('post' == get_post_type()){ ?>
 
 <article id="post-content">
 	<div><?php
@@ -30,6 +29,19 @@ if('post' == get_post_type()){
 	endwhile;
 	?></div>
 </article>
+
+<?php
+//For products
+}else if('product' == get_post_type()){ 
+	the_post();
+?>
+
+<section id="product-page" class="top">
+	<h1><?php the_title(); ?></h1>
+	<div class="content">
+		<?php the_content(); ?>
+	</div>
+</section>
 
 <?php 
 //Default view
