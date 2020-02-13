@@ -1009,6 +1009,13 @@ footer #menu-footer-menu li a:hover{
 	padding-right: 15px;
 	margin-bottom: 15px;
 }
+#shop .woocommerce-ordering{
+	display: none;
+}
+#shop nav.woocommerce-pagination{
+	position: static;
+	background: none;
+}
 /*=== End Shop Page ===*/
 
 
