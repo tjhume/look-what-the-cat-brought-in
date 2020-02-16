@@ -1018,6 +1018,9 @@ footer #menu-footer-menu li a:hover{
 	position: static;
 	background: none;
 }
+#shop .woocommerce-result-count{
+	display: none;
+}
 /*=== End Shop Page ===*/
 
 

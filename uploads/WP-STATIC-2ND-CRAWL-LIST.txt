@@ -1,12 +1,12 @@
-/category/uncategorized/feed/
-/elementor-1218/feed/
-/indy-give-campaign-ends-on-december-31/feed/
 /my-account/lost-password/
+/news/category/uncategorized/feed/
+/news/elementor-1218/feed/
+/news/indy-give-campaign-ends-on-december-31/feed/
+/news/test-post/feed/
+/news/the-catio/feed/
 /product-category/uncategorized/feed/
 /product/example-product-copy/feed/
 /product/example-product/feed/
-/test-post/feed/
-/the-catio/feed/
 /wp-content/plugins/contact-form-7/includes/css/styles.css
 /wp-content/plugins/contact-form-7/includes/js/scripts.js
 /wp-content/plugins/elementor/assets/css/frontend.min.css
