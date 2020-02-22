@@ -46,6 +46,8 @@ $options_id = get_theme_options_id(); ?>
                             <div class="adopt-overlay">
                                 $75
                             </div>
+                            <img class="main-content" src="../wp-content/uploads/2020/02/adult-cat.jpg" alt="Adult Cat">
+                            <h3 class="main-content">Single Adult Cat</h3>
                         </div>
                     </div>
                     <div class="adopt-box">
@@ -53,6 +55,8 @@ $options_id = get_theme_options_id(); ?>
                             <div class="adopt-overlay">
                                 $125
                             </div>
+                            <img class="main-content" src="../wp-content/uploads/2020/02/pair-of-cats.jpg" alt="Pair of Adult Cats">
+                            <h3 class="main-content">Pair of Adult Cats</h3>
                         </div>
                     </div>
                     <div class="adopt-box">
@@ -60,8 +64,11 @@ $options_id = get_theme_options_id(); ?>
                             <div class="adopt-overlay">
                                 $100
                             </div>
+                            <img class="main-content" src="../wp-content/uploads/2020/02/kitten.jpg" alt="Kittens">
+                            <h3 class="main-content">Kittens</h3>
                         </div>
                     </div>
+                    <div class="clear"></div>
                 </div>
             </div>
         </section>
