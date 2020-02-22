@@ -617,9 +617,9 @@ class WPvivid_Admin {
         $page_array['website_info'] = array('index' => '6', 'tab_func' => array($this, 'wpvivid_add_tab_website_info'), 'page_func' => array($this, 'wpvivid_add_page_website_info'));
         $page_array['log'] = array('index' => '7', 'tab_func' => array($this, 'wpvivid_add_tab_log'), 'page_func' => array($this, 'wpvivid_add_page_log'));
         $page_array['read_log'] = array('index' => '9', 'tab_func' => array($this, 'wpvivid_add_tab_read_log'), 'page_func' => array($this, 'wpvivid_add_page_read_log'));
-        $hide_mwp_tab_page = get_option('wpvivid_hide_mwp_tab_page', false);
+        $hide_mwp_tab_page = get_option('wpvivid_hide_mwp_tab_page_v1', false);
         if($hide_mwp_tab_page === false) {
-            //$page_array['mwp'] = array('index' => '30', 'tab_func' => array($this, 'wpvivid_add_tab_mwp'), 'page_func' => array($this, 'wpvivid_add_page_mwp'));
+            $page_array['mwp'] = array('index' => '30', 'tab_func' => array($this, 'wpvivid_add_tab_mwp'), 'page_func' => array($this, 'wpvivid_add_page_mwp'));
         }
         return $page_array;
     }
@@ -1104,13 +1104,44 @@ class WPvivid_Admin {
         <div id="mwp-page" class="wrap-tab-content wpvivid_tab_mainwp" name="tab-mwp" style="display:none;">
             <div style="padding: 10px; background-color: #fff;">
                 <div style="margin-bottom: 10px;">
-                    WPvivid Backup Plugin can be managed from MainWP dashboard now. <a target="_blank" href="https://wordpress.org/plugins/wpvivid-backup-mainwp/" style="text-decoration: none;">Download WPvivid Backup for MainWP extension from wordpress.org.</a>
+                    If you are a MainWP user, you can set up and control WPvivid Backup Free and Pro for every child site directly from your MainWP dashboard, using our WPvivid Backup for MainWP extension.
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <input type="button" class="button-primary" id="wpvivid_download_mainwp_extension" value="<?php esc_attr_e('Download WPvivid Backup for MainWP', 'wpvivid'); ?>" />
+                </div>
+                <div style="margin-bottom: 10px;">
+                    l. Create and download backups for a specific child site
+                </div>
+                <div style="margin-bottom: 10px;">
+                    2. Set backup schedules for all child sites
+                </div>
+                <div style="margin-bottom: 10px;">
+                    3. Set WPvivid Backup Free and Pro settings for all child sites
+                </div>
+                <div style="margin-bottom: 10px;">
+                    4. Install, claim and update WPvivid Backup Pro for child sites in bulk
+                </div>
+                <div style="margin-bottom: 10px;">
+                    5. Set up remote storage for child sites in bulk (for WPvivid Backup Pro only)
+                </div>
+                <div style="margin-bottom: 10px;">
+                    We also offer a 40% off discount on WPvivid Backup Pro for MainWP users.
                 </div>
                 <div>
-                    <strong>Note: </strong>This extension currently only works with the community version of WPvivid Backup Plugin.
+                    <input type="button" class="button-primary" id="wpvivid_ask_for_discount" value="<?php esc_attr_e('Ask For A 40% OFF Discount', 'wpvivid'); ?>" />
                 </div>
             </div>
         </div>
+        <script>
+            jQuery('#wpvivid_download_mainwp_extension').click(function(){
+                var tempwindow=window.open('_blank');
+                tempwindow.location='https://wordpress.org/plugins/wpvivid-backup-mainwp';
+            });
+            jQuery('#wpvivid_ask_for_discount').click(function(){
+                var tempwindow=window.open('_blank');
+                tempwindow.location='https://wpvivid.com/wpvivid-backup-for-mainwp';
+            });
+        </script>
         <?php
     }
 }

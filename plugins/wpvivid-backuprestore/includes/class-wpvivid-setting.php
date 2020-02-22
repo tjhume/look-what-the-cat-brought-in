@@ -628,10 +628,14 @@ class WPvivid_Setting
         $check_ret=apply_filters('wpvivid_check_is_pro_mainwp', false);
         if(!$check_ret){
             $data['is_pro']=false;
+            $data['is_install']=false;
+            $data['is_login']=false;
             $data['latest_version']='';
         }
         else{
             $data['is_pro']=$check_ret['check_pro'];
+            $data['is_install']=isset($check_ret['check_install']) ? $check_ret['check_install'] : false;
+            $data['is_login']=isset($check_ret['check_login']) ? $check_ret['check_login'] : false;
             $data['latest_version']=$check_ret['latest_version'];
         }
         $data['time_zone']=apply_filters('wpvivid_get_time_zone_addon_mainwp', false);

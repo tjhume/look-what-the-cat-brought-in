@@ -32,7 +32,7 @@ delete_option('cron_backup_count');
 delete_option('wpvivid_backup_success_count');
 delete_option('wpvivid_backup_error_array');
 delete_option('wpvivid_amazons3_notice');
-delete_option('wpvivid_hide_mwp_tab_page');
+delete_option('wpvivid_hide_mwp_tab_page_v1');
 delete_option('wpvivid_hide_wp_cron_notice');
 delete_option('wpvivid_transfer_error_array');
 delete_option('wpvivid_transfer_success_count');

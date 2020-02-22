@@ -705,6 +705,8 @@ class WPvivid_Migrate
 
         //Start backup site
         global $wpvivid_plugin;
+        //flush buffer
+        $wpvivid_plugin->flush($task_id);
         $wpvivid_plugin->backup($task_id);
         die();
     }
@@ -732,6 +734,7 @@ class WPvivid_Migrate
         global $wpvivid_plugin;
         //add_action('wpvivid_handle_upload_succeed',array($this,'wpvivid_deal_upload_succeed'),11);
         $wpvivid_plugin->check_backup($task_id,$backup['backup_files']);
+        $wpvivid_plugin->flush($task_id);
         $wpvivid_plugin->backup($task_id);
         //}
         die();

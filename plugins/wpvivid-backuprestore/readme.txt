@@ -1,10 +1,10 @@
-﻿=== Migrate & Backup WordPress - WPvivid Backup Plugin ===
+=== Migrate & Backup WordPress - WPvivid Backup Plugin ===
 Contributors: wpvivid
 Tags: move, clone, migrate, copy, backup, restore, auto backup, cloud backup
 Requires at least: 4.5
 Tested up to: 5.3.2
 Requires PHP: 5.3
-Stable tag: 0.9.33
+Stable tag: 0.9.34
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -16,8 +16,10 @@ WPvivid Backup Plugin is the only free all-in-one backup, restore and migration 
 Migrate a copy of WP site to a new host (a new domain),schedule backups,send backups to leading remote storage. All in one backup&migration plugin.
 
 == WPvivid Backup for MainWP ==
-[WPvivid Backup for MainWP](https://wordpress.org/plugins/wpvivid-backup-mainwp/) is now available to download.
-This extension allows you to set up and control WPvivid Backup Plugin for all child sites directly from your MainWP dashboard.
+[WPvivid Backup for MainWP](https://wpvivid.com/wpvivid-backup-for-mainwp) is now available to download.
+This extension allows you to set up and control WPvivid Backup Free and Pro for all child sites directly from your MainWP dashboard.
+
+Click to download [WPvivid Backup for MainWP](https://wordpress.org/plugins/wpvivid-backup-mainwp/)
 
 == WPvivid Backup Pro is Now Available ==
 * Customize everything to backup
@@ -169,6 +171,12 @@ Thank you for translating WPvivid Backup Plugin to your languages!
 * [Shohei OKADA](https://ja.gravatar.com/silversword0630)(Japanese)
 
 == Changelog ==
+= 0.9.34 =
+- Fixed the PHP 7.4 compatibility issue.
+- Fixed: Backing up upload directory failed in some cases.
+- Fixed: Backup filenames did not match the downloads part numbers.
+- Updated the API for WPvivid Backup for MainWP extension.
+- Fixed some bugs in the plugin code.
 = 0.9.33 =
 - Fixed:Replacing domain failed after migrating on servers using innodb database engine.
 - Fixed: Compressed packages were lost in some cases.

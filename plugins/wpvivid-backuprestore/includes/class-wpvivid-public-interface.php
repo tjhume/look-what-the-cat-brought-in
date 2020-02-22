@@ -77,6 +77,7 @@ class WPvivid_Public_Interface
         }
         flush();
 
+        $wpvivid_plugin->flush($task_id);
         //Start backup site
         $wpvivid_plugin->backup($task_id);
         $ret['result']='success';

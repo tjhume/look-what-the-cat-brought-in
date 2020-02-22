@@ -594,6 +594,8 @@ class WPvivid {
                 echo json_encode($ret);
                 die();
             }
+            //flush buffer
+            $this->flush($task_id);
             $this->backup($task_id);
         }
         catch (Exception $error) {
@@ -849,6 +851,8 @@ class WPvivid {
             if ($ret['result'] == 'success') {
                 //Check the website data to be backed up.
                 $this->check_backup($ret['task_id'], $schedule_options['backup']);
+                //flush buffer
+                $this->flush($ret['task_id']);
                 //start backup task.
                 $this->backup($ret['task_id']);
             }
@@ -907,10 +911,14 @@ class WPvivid {
         $doing=WPvivid_taskmanager::get_backup_main_task_progress($task_id);
         if($doing=='backup')
         {
+            //flush buffer
+            $this->flush($task_id);
             $this->backup($task_id);
         }
         else if($doing=='upload')
         {
+            //flush buffer
+            $this->flush($task_id);
             $this->upload($task_id);
         }
         //resume backup
@@ -1077,7 +1085,7 @@ class WPvivid {
         //start a watch task event
         $this->add_monitor_event($task_id);
         //flush buffer
-        $this->flush($task_id);
+        //$this->flush($task_id);
         $this->wpvivid_log->OpenLogFile(WPvivid_taskmanager::get_task_options($task_id,'log_file_name'));
         $this->wpvivid_log->WriteLog('Start backing up.','notice');
         $this->wpvivid_log->WriteLogHander();
@@ -1202,7 +1210,7 @@ class WPvivid {
         //start a watch task event
         $this->add_monitor_event($task_id);
         //flush buffer
-        $this->flush($task_id);
+        //$this->flush($task_id);
         $this->wpvivid_log->OpenLogFile(WPvivid_taskmanager::get_task_options($task_id,'log_file_name'));
         $this->wpvivid_log->WriteLog('Start upload.','notice');
 
@@ -2071,7 +2079,37 @@ class WPvivid {
             }
         }
     }
-    private function flush($task_id)
+    public function flush($txt, $from_mainwp=false) {
+        if(!$from_mainwp) {
+            $ret['result'] = 'success';
+            $ret['task_id'] = $txt;
+            $txt = json_encode($ret);
+        }
+        else{
+            $ret['result']='success';
+            $txt = '<mainwp>' . base64_encode( serialize( $ret ) ) . '</mainwp>';
+        }
+        if(!headers_sent()){
+            header('Content-Length: '.( ( ! empty( $txt ) ) ? strlen( $txt ) : '0' ));
+            header('Connection: close');
+            header('Content-Encoding: none');
+        }
+        if (session_id())
+            session_write_close();
+        echo $txt;
+
+        if(function_exists('fastcgi_finish_request'))
+        {
+            fastcgi_finish_request();
+        }
+        else
+        {
+            if(ob_get_level()>0)
+                ob_flush();
+            flush();
+        }
+    }
+    /*private function flush($task_id)
     {
         $ret['result']='success';
         $ret['task_id']=$task_id;
@@ -2098,7 +2136,7 @@ class WPvivid {
                 ob_flush();
             flush();
         }
-    }
+    }*/
     /**
      * return initialization download page data
      *
@@ -2248,7 +2286,6 @@ class WPvivid {
             $ret=$backup_item->get_download_progress($backup_id, $ret['files']);
             WPvivid_taskmanager::update_download_cache($backup_id,$ret);
         }
-
         return $ret;
     }
 
@@ -5234,7 +5271,8 @@ class WPvivid {
                 } else {
                     $pic = $value['default_pic'];
                 }
-                $html .= '<img  src="' . esc_url(WPVIVID_PLUGIN_URL . $pic) . '" style="vertical-align:middle; " title="' . $title . '"/>';
+                $url = apply_filters('wpvivid_get_wpvivid_pro_url', WPVIVID_PLUGIN_URL, $key);
+                $html .= '<img  src="' . esc_url($url . $pic) . '" style="vertical-align:middle; " title="' . $title . '"/>';
             }
             $html.='<img onclick="wpvivid_click_switch_page(\'wrap\', \'wpvivid_tab_remote_storage\', true);" src="'.esc_url(WPVIVID_PLUGIN_URL.'/admin/partials/images/add-storages.png').'" style="vertical-align:middle;" title="Add a storage"/>';
         }
@@ -5509,7 +5547,7 @@ class WPvivid {
     }
 
     public function hide_mainwp_tab_page(){
-        WPvivid_Setting::update_option('wpvivid_hide_mwp_tab_page', true);
+        WPvivid_Setting::update_option('wpvivid_hide_mwp_tab_page_v1', true);
         $ret['result']=WPVIVID_SUCCESS;
         echo json_encode($ret);
         die();

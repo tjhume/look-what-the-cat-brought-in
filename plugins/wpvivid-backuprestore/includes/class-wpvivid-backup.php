@@ -10,7 +10,7 @@ define('WPVIVID_BACKUP_TYPE_THEMES','backup_themes');
 define('WPVIVID_BACKUP_TYPE_PLUGIN','backup_plugin');
 define('WPVIVID_BACKUP_TYPE_UPLOADS','backup_uploads');
 define('WPVIVID_BACKUP_TYPE_UPLOADS_FILES','backup_uploads_files');
-define('WPVIVID_BACKUP_TYPE_UPLOADS_FILES_OTHER','backup_uploads_files_other');
+//define('WPVIVID_BACKUP_TYPE_UPLOADS_FILES_OTHER','backup_uploads_files_other');
 define('WPVIVID_BACKUP_TYPE_CONTENT','backup_content');
 define('WPVIVID_BACKUP_TYPE_CORE','backup_core');
 define('WPVIVID_BACKUP_TYPE_OTHERS','backup_others');
@@ -43,7 +43,7 @@ class WPvivid_Backup_Task
         $this->backup_type_collect[WPVIVID_BACKUP_TYPE_PLUGIN]=1;
         $this->backup_type_collect[WPVIVID_BACKUP_TYPE_UPLOADS]=1;
         $this->backup_type_collect[WPVIVID_BACKUP_TYPE_UPLOADS_FILES]=1;
-        $this->backup_type_collect[WPVIVID_BACKUP_TYPE_UPLOADS_FILES_OTHER]=1;
+        //$this->backup_type_collect[WPVIVID_BACKUP_TYPE_UPLOADS_FILES_OTHER]=1;
         $this->backup_type_collect[WPVIVID_BACKUP_TYPE_CONTENT]=1;
         $this->backup_type_collect[WPVIVID_BACKUP_TYPE_CORE]=1;
         $this->backup_type_collect[WPVIVID_BACKUP_TYPE_OTHERS]=1;
@@ -188,7 +188,7 @@ class WPvivid_Backup_Task
                 if(isset($general_setting['options']['wpvivid_compress_setting']['subpackage_plugin_upload']) && !empty($general_setting['options']['wpvivid_compress_setting']['subpackage_plugin_upload'])){
                     if($general_setting['options']['wpvivid_compress_setting']['subpackage_plugin_upload']){
                         $this->set_backup(WPVIVID_BACKUP_TYPE_UPLOADS_FILES);
-                        $this->set_backup(WPVIVID_BACKUP_TYPE_UPLOADS_FILES_OTHER);
+                        //$this->set_backup(WPVIVID_BACKUP_TYPE_UPLOADS_FILES_OTHER);
                     }
                     else{
                         $this->set_backup(WPVIVID_BACKUP_TYPE_UPLOADS);
@@ -208,7 +208,7 @@ class WPvivid_Backup_Task
                 if(isset($general_setting['options']['wpvivid_compress_setting']['subpackage_plugin_upload']) && !empty($general_setting['options']['wpvivid_compress_setting']['subpackage_plugin_upload'])){
                     if($general_setting['options']['wpvivid_compress_setting']['subpackage_plugin_upload']){
                         $this->set_backup(WPVIVID_BACKUP_TYPE_UPLOADS_FILES);
-                        $this->set_backup(WPVIVID_BACKUP_TYPE_UPLOADS_FILES_OTHER);
+                        //$this->set_backup(WPVIVID_BACKUP_TYPE_UPLOADS_FILES_OTHER);
                     }
                     else{
                         $this->set_backup(WPVIVID_BACKUP_TYPE_UPLOADS);
@@ -342,9 +342,11 @@ class WPvivid_Backup_Task
                 $exclude_regex[]='#^'.preg_quote($this -> transfer_path($upload_dir['basedir']).DIRECTORY_SEPARATOR.'backup-guard', '/').'#';  // Wordpress Backup and Migrate Plugin backup directory
                 $exclude_regex[]='#^'.preg_quote($this -> transfer_path($upload_dir['basedir']).DIRECTORY_SEPARATOR.'ShortpixelBackups', '/').'#';
                 $backup_data['exclude_regex']=$exclude_regex;
-                $backup_data['include_regex'][]='#^'.preg_quote($this -> transfer_path($upload_dir['basedir']).DIRECTORY_SEPARATOR, '/').'[0-9]{4}#';
+                $backup_data['include_regex']=array();
+                //$backup_data['include_regex'][]='#^'.preg_quote($this -> transfer_path($upload_dir['basedir']).DIRECTORY_SEPARATOR, '/').'[0-9]{4}#';
                 $backup_data['json_info']['file_type']='upload';
             }
+            /*
             else if($backup==WPVIVID_BACKUP_TYPE_UPLOADS_FILES_OTHER)
             {
                 //$backup_data['root_path']=WP_CONTENT_DIR;
@@ -359,7 +361,7 @@ class WPvivid_Backup_Task
                 $backup_data['exclude_regex']=$exclude_regex;
                 $backup_data['include_regex']=array();
                 $backup_data['json_info']['file_type']='upload';
-            }
+            }*/
             else if($backup==WPVIVID_BACKUP_TYPE_CONTENT)
             {
                 //$backup_data['root_path']=get_home_path();
@@ -1324,11 +1326,12 @@ class WPvivid_Backup_Task
     public function get_uploads_folder_list($root,$exclude_regex,$include_regex,$exclude_file_size)
     {
         $files=array();
+        $files[] = $root;
         $this->getUploadsFolder($files,$root,$exclude_regex,$include_regex,$exclude_file_size);
         return $files;
     }
 
-    public function getUploadsFolder(&$files,$path,$exclude_regex=array(),$include_regex=array(),$exclude_file_size=array(),$include_dir = true,$subdir=false)
+    public function getUploadsFolder(&$files,$path,$exclude_regex=array(),$include_regex=array(),$exclude_file_size=array(),$include_dir = true)
     {
         $count = 0;
         if(is_dir($path))
@@ -1346,14 +1349,9 @@ class WPvivid_Backup_Task
                         {
                             if ($this->regex_match($include_regex, $path . DIRECTORY_SEPARATOR . $filename, 1))
                             {
-                                if($subdir)
-                                    $files[] = $path . DIRECTORY_SEPARATOR . $filename;
-                                else
-                                    $this->getUploadsFolder($files,$path . DIRECTORY_SEPARATOR . $filename,$exclude_regex,$include_regex,$exclude_file_size,$include_dir,true);
+                                $this->getUploadsFolder($files,$path . DIRECTORY_SEPARATOR . $filename,$exclude_regex,$include_regex,$exclude_file_size,$include_dir);
                             }
                         }
-                    } else {
-
                     }
                 }
             }
@@ -1362,8 +1360,7 @@ class WPvivid_Backup_Task
         }
         if($include_dir && $count == 0)
         {
-            if($subdir)
-                $files[] = $path;
+            $files[] = $path;
         }
     }
 
@@ -1960,6 +1957,33 @@ class WPvivid_Backup_Item
                 }
             }
         }
+        asort($files);
+        uasort($files, function ($a, $b) {
+            $file_name_1 = $a['file_name'];
+            $file_name_2 = $b['file_name'];
+            $index_1 = 0;
+            if(preg_match('/wpvivid-.*_.*_.*\.part.*\.zip$/', $file_name_1)) {
+                if (preg_match('/part.*$/', $file_name_1, $matches)) {
+                    $index_1 = $matches[0];
+                    $index_1 = preg_replace("/part/","", $index_1);
+                    $index_1 = preg_replace("/.zip/","", $index_1);
+                }
+            }
+            $index_2 = 0;
+            if(preg_match('/wpvivid-.*_.*_.*\.part.*\.zip$/', $file_name_2)) {
+                if (preg_match('/part.*$/', $file_name_2, $matches)) {
+                    $index_2 = $matches[0];
+                    $index_2 = preg_replace("/part/", "", $index_2);
+                    $index_2 = preg_replace("/.zip/", "", $index_2);
+                }
+            }
+            if($index_1 !== 0 && $index_2 === 0){
+                return -1;
+            }
+            if($index_1 === 0 && $index_2 !== 0){
+                return 1;
+            }
+        });
         return $files;
     }
 

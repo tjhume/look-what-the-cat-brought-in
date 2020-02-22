@@ -878,7 +878,7 @@ class WPvivid_RestoreDB
                             else
                             {
                                 $update_query=$temp_query;
-                                $wpvivid_plugin->restore_data->write_log('update replace rows', 'notice');
+                                //$wpvivid_plugin->restore_data->write_log('update replace rows', 'notice');
                                 $this->execute_sql($update_query);
                                 $update_query='';
                             }

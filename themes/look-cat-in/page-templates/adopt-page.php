@@ -90,6 +90,18 @@ $options_id = get_theme_options_id(); ?>
         <section id="adoptable-cats">
             <h1>ADOPTABLE CATS</h1>
             <p>Coming soon!</p>
+            <?php
+                /*$opts = array(
+                    'http'=>array(
+                    'method'=>"GET",
+                    'header'=>"X-API-KEY: cbc6298d-2f55-455a-a73e-28a3b65ac13d"
+                    )
+                );
+                $context = stream_context_create($opts);
+                $file = file_get_contents('https://www.shelterluv.com/api/v1/animals?status_type=publishable', false, $context);*/
+
+                //Now $file contains a JSON array with all cats! Commented out for now so no unnecessary requests are made until cats are actually added.
+            ?>
         </section>
 
     </div>

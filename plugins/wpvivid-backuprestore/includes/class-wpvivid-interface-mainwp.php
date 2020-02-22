@@ -139,22 +139,28 @@ class WPvivid_Interface_MainWP
             return $ret;
         }
         $task_id=sanitize_key($task_id);
-        $ret['result']='success';
+        /*$ret['result']='success';
         $txt = '<mainwp>' . base64_encode( serialize( $ret ) ) . '</mainwp>';
         // Close browser connection so that it can resume AJAX polling
-        header( 'Content-Length: ' . ( ( ! empty( $txt ) ) ? strlen( $txt ) : '0' ) );
-        header( 'Connection: close' );
-        header( 'Content-Encoding: none' );
+        if(!headers_sent()) {
+            header('Content-Length: ' . ((!empty($txt)) ? strlen($txt) : '0'));
+            header('Connection: close');
+            header('Content-Encoding: none');
+        }
         if ( session_id() ) {
             session_write_close();
         }
         echo $txt;
         // These two added - 19-Feb-15 - started being required on local dev machine, for unknown reason (probably some plugin that started an output buffer).
-        if ( ob_get_level() ) {
+        $ob_level = ob_get_level();
+        while ($ob_level > 0) {
             ob_end_flush();
+            $ob_level--;
         }
         flush();
+        if (function_exists('fastcgi_finish_request')) fastcgi_finish_request();*/
 
+        $wpvivid_plugin->flush($task_id, true);
         //Start backup site
         $wpvivid_plugin->backup($task_id);
         $ret['result']='success';
