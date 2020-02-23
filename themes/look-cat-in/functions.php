@@ -205,3 +205,18 @@ add_filter( 'wc_product_sku_enabled', '__return_false' );
  * Remove related products
  */
 add_filter('woocommerce_product_related_posts_query', '__return_empty_array', 100);
+
+/**
+ * Update header cart count dynamically
+ */
+add_filter( 'woocommerce_add_to_cart_fragments', 'cat_cart_count_fragments', 10, 1 );
+function cat_cart_count_fragments($fragments){
+	$cart_count = WC()->cart->get_cart_contents_count();
+
+	if($cart_count == 0){
+		$fragments['div.cart-count'] = '<div class="cart-count hidden"></div>';
+	}else{
+		$fragments['div.cart-count'] = '<div class="cart-count">' . $cart_count . '</div>';   
+	} 
+    return $fragments;
+}

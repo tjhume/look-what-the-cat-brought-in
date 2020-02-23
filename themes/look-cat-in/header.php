@@ -25,7 +25,7 @@ $options_id = get_theme_options_id();
 	<header>
 		<nav>
 			<div id="nav-logo">
-				<a href="/"><img src="<?php the_field( 'site_logo', $options_id ); ?>" alt="Look What the Cat Brought In"></a>
+				<a href="/"><img src="<?php the_field('site_logo', $options_id); ?>" alt="Look What the Cat Brought In"></a>
 			</div>
 			<div id="nav-links">
 				<?php wp_nav_menu( array(
@@ -35,6 +35,19 @@ $options_id = get_theme_options_id();
 					));
 				?>
 			</div>
+			<?php if(is_user_logged_in()){ ?>
+			<a class ="menu-cart" href="/cart">
+				<img src="<?php the_field('cart_icon', $options_id); ?>" alt="Cart">
+				<?php
+					$cart_count = WC()->cart->get_cart_contents_count();
+					if($cart_count > 0){
+				?>
+				<div class="cart-count"><?php echo $cart_count; ?></div>
+				<?php
+					}
+				?>
+			</a>
+			<?php } ?>
 			<div class="hamburger hamburger--squeeze js-hamburger">
 				<div class="hamburger-box">
 					<div class="hamburger-inner"></div>
