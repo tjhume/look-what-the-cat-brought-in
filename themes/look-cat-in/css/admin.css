@@ -6,12 +6,3 @@
 li#menu-comments{
 	display: none;
 }
-
-/* Cleans up Theme Settings page */
-.post-type-theme_options #misc-publishing-actions,
-.post-type-theme_options #delete-action,
-.post-type-theme_options #titlediv,
-.post-type-theme_options .page-title-action,
-.post-type-theme_options #minor-publishing-actions{
-    display: none;
-}

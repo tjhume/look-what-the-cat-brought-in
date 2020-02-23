@@ -15,6 +15,20 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<?php $logged_in = is_user_logged_in(); if($logged_in){ ?>
+		<style>
+			<?php if(is_page_template('Home')){ echo '#wp-admin-bar-elementor_edit_page,'; } ?>
+			#wp-admin-bar-comments{
+				display: none;
+			}
+			body.admin-bar{
+				margin-top: 32px !important;
+			}
+			body.admin-bar nav{
+				top: 32px;
+			}
+		</style>
+	<?php } ?>
 	<?php wp_head(); ?>
 </head>
 
@@ -33,7 +47,7 @@
 					));
 				?>
 			</div>
-			<?php if(is_user_logged_in()){ ?>
+			<?php if($logged_in){ ?>
 			<a class ="menu-cart" href="/cart">
 				<img src="<?php the_field('cart_icon', 'option'); ?>" alt="Cart">
 				<?php
