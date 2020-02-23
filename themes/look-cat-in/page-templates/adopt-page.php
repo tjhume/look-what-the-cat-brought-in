@@ -105,8 +105,9 @@ $options_id = get_theme_options_id(); ?>
                     )
                 );
                 $context = stream_context_create($opts);
-                $file = file_get_contents('https://www.shelterluv.com/api/v1/animals?status_type=publishable', false, $context);*/
+                $file = file_get_contents('https://www.shelterluv.com/api/v1/animals', false, $context);
 
+                echo $file;*/
                 //Now $file contains a JSON array with all cats! Commented out for now so no unnecessary requests are made until cats are actually added.
             ?>
         </section>
