@@ -2,8 +2,7 @@
 /**
 * Template Name: Cart
 */
-get_header(); 
-$options_id = get_theme_options_id(); ?>
+get_header(); ?>
 
 <section id="cart" class="top">
     <h1>Cart</h1>

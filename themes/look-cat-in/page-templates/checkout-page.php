@@ -2,8 +2,7 @@
 /**
 * Template Name: Checkout
 */
-get_header(); 
-$options_id = get_theme_options_id(); ?>
+get_header(); ?>
 
 <section id="checkout" class="top">
     <h1>Checkout</h1>

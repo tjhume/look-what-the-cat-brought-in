@@ -2,8 +2,7 @@
 /**
 * Template Name: News
 */
-get_header(); 
-$options_id = get_theme_options_id(); ?>
+get_header(); ?>
 
 <section class="top" id="news">
     <h1>News</h1>

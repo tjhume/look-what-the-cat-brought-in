@@ -6,7 +6,6 @@
  *
  * @package Look_What_the_Cat_Brought_In
  */
-$options_id = get_theme_options_id();
 ?>
 
 <footer>
@@ -15,8 +14,8 @@ $options_id = get_theme_options_id();
             <div class="social-icons">
                 <?php
                 $i = 1;
-                $rowCount = count(get_field('social_icons', $options_id));
-                if(have_rows('social_icons', $options_id)): while(have_rows('social_icons', $options_id)):the_row(); 
+                $rowCount = count(get_field('social_icons', 'option'));
+                if(have_rows('social_icons', 'option')): while(have_rows('social_icons', 'option')):the_row(); 
                     $image = get_sub_field('image');
                     $alt = esc_attr($image['alt']);
                     $src = esc_url($image['url']);

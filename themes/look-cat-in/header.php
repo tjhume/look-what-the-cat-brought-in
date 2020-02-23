@@ -8,8 +8,6 @@
  *
  * @package Look_What_the_Cat_Brought_In
  */
-
-$options_id = get_theme_options_id();
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -25,7 +23,7 @@ $options_id = get_theme_options_id();
 	<header>
 		<nav>
 			<div id="nav-logo">
-				<a href="/"><img src="<?php the_field('site_logo', $options_id); ?>" alt="Look What the Cat Brought In"></a>
+				<a href="/"><img src="<?php the_field('site_logo', 'option'); ?>" alt="Look What the Cat Brought In"></a>
 			</div>
 			<div id="nav-links">
 				<?php wp_nav_menu( array(
@@ -37,7 +35,7 @@ $options_id = get_theme_options_id();
 			</div>
 			<?php if(is_user_logged_in()){ ?>
 			<a class ="menu-cart" href="/cart">
-				<img src="<?php the_field('cart_icon', $options_id); ?>" alt="Cart">
+				<img src="<?php the_field('cart_icon', 'option'); ?>" alt="Cart">
 				<?php
 					$cart_count = WC()->cart->get_cart_contents_count();
 					if($cart_count > 0){

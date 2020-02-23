@@ -919,13 +919,13 @@ footer #menu-footer-menu li a:hover{
 #adopt .opacity{
 	color: white;
 }
-#adopt #application,
 #adopt #adoptable-cats{
 	padding-top: 50px;
 	padding-bottom: 50px;
 	height: 500px;
 }
-#adopt #information{
+#adopt #information,
+#adopt #application{
 	padding-top: 50px;
 	padding-bottom: 50px;
 }

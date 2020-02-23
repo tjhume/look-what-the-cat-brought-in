@@ -70,67 +70,54 @@ function look_cat_in_admin_scripts(){
 add_action('admin_enqueue_scripts', 'look_cat_in_admin_scripts');
 
 /**
- * Adds Theme Options Page
+ * Add Theme Options page
  */
-$cpt_args = array(
-	'public'          => false,
-	'show_ui'         => true,
-	'show_in_menu'    => false,
-	'capability_type' => 'page',
-	'query_var'       => false,
-	'supports'        => array(
-		'title',
-		'revisions',
-	),
-	'labels'          => array(
-		'name'               => 'Options',
-		'all_items'          => 'All',
-		'add_new'            => 'New',
-		'add_new_item'       => 'New',
-		'edit_item'          => 'Theme Options',
-		'new_item'           => 'New',
-		'view_item'          => 'View',
-		'search_item'        => 'Search',
-		'not_found'          => 'Not found',
-		'not_found_in_trash' => 'Not found in Trash',
-	),
-);
-register_post_type( 'theme_options', $cpt_args );
-if(!get_page_by_title( 'Theme Options', OBJECT, 'theme_options' )){
-	$options_page = array(
-		'post_title'     => 'Theme Options',
-		'post_type'      => 'theme_options',
-		'post_status'    => 'private',
-		'ping_status'    => 'closed',
-		'comment_status' => 'closed',
-	);
-
-	wp_insert_post( $options_page );
-}
-function theme_options_menu(){
-	$options_page = get_page_by_title('Theme Options', OBJECT, 'theme_options');
-	add_menu_page(
-		'Theme Options',
-		'Theme Options',
-		'edit_posts',
-		'/post.php?post=' . $options_page->ID .'&action=edit',
-		'',
-		'dashicons-admin-generic'
-	);
-}
-add_action('admin_menu', 'theme_options_menu');
-
-/**
- * To get Theme options ID from page templates
- */
-function get_theme_options_id(){
-	return get_page_by_title( 'Theme Options', OBJECT, 'theme_options' )->ID;
+add_action('acf/init', 'look_cat_in_acf_op_init');
+function look_cat_in_acf_op_init() {
+    if( function_exists('acf_add_options_page') ) {
+        $option_page = acf_add_options_page(array(
+            'page_title'    => __('Theme Settings'),
+            'menu_title'    => __('Theme Settings'),
+            'menu_slug'     => 'theme-settings',
+            'capability'    => 'edit_posts',
+            'redirect'      => false
+        ));
+    }
 }
 
 /**
- * Add repeaters
+ * Cache Shelterluv API calls for 30 min
  */
-include_once('acf-repeater/acf-repeater.php');
+function get_cats(){
+
+	$transient = get_transient( 'shelterluv_cats' );
+
+	if( !empty( $transient ) ) {
+		return $transient;
+	}else{
+	
+		$opts = array(
+			'http'=>array(
+			'method'=>"GET",
+			'header'=>"X-API-KEY: cbc6298d-2f55-455a-a73e-28a3b65ac13d"
+			)
+		);
+		$context = stream_context_create($opts);
+		$file = file_get_contents('https://www.shelterluv.com/api/v1/animals&limit=1000', false, $context);
+		$animals = json_decode($file)->{'animals'};
+		$returnAnimals = [];
+
+		foreach($animals as $animal){
+			if($animal->{'Status'} === 'Welfare Assessment'){
+				array_push($returnAnimals, $animal);
+			}
+		}
+
+		set_transient( 'shelterluv_cats', $returnAnimals, (30 * MINUTE_IN_SECONDS) );
+		
+		return $returnAnimals;
+	}
+}
 
 /**
  * To get first image from a post

@@ -2,8 +2,7 @@
 /**
 * Template Name: Get Involved
 */
-get_header(); 
-$options_id = get_theme_options_id(); ?>
+get_header(); ?>
 
 <div id="get-involved">
     <div class="hero-background" style="background-image: url('../wp-content/uploads/2020/02/get-involved-hero.jpg')">
@@ -24,7 +23,7 @@ $options_id = get_theme_options_id(); ?>
             </div>
             <div class="hero-social">
                 <div class="hero-social-wrap">
-                    <?php if(have_rows('social_icons', $options_id)): while(have_rows('social_icons', $options_id)):the_row(); 
+                    <?php if(have_rows('social_icons', 'option')): while(have_rows('social_icons', 'option')):the_row(); 
                         $image = get_sub_field('image');
                         $alt = esc_attr($image['alt']);
                         $src = esc_url($image['url']);
