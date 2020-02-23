@@ -1,4 +1,0 @@
-Log created: 2020-02-07 03:55:04
-Type: scan
-[2020-02-07 03:55:04][notice]server info fcgi:Off max execution time: 900 wp version:5.3.2 php version:7.3.9 db version:5.5.5 php ini:safe_mode: memory_limit:128M memory_get_usage:47.24 MB memory_get_peak_usage:47.80 MB extensions:PDO enabled curl enabled zlib enabled   is_multisite:0
-[2020-02-07 03:55:04][notice]Upload finished.
