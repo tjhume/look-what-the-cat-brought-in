@@ -170,6 +170,7 @@ get_header(); ?>
     <section id="featured-cats" class="opacity">
         <h1>FEATURED CATS</h1>
         <hr class="title-line">
+        <?php if(is_user_logged_in()){ ?>
         <div id="featured-cats-wrapper">
             <?php
                 $image = get_field('cat_1_image');
@@ -206,6 +207,9 @@ get_header(); ?>
             </div>
             <div class="clear"></div>
         </div>
+        <?php }else{ ?>
+            <p style="text-align: center;">Coming soon!</p>
+        <?php } ?>
     </section>
 </div>
 

@@ -34,7 +34,7 @@ jQuery(document).ready(function(){
         jQuery(el).closest("li").hover(function(){
             setTimeoutConst = setTimeout(function(){
                 jQuery(el).addClass("expand");
-              }, 300);
+              }, 200);
         }, function(){
             clearTimeout(setTimeoutConst);
             jQuery(el).removeClass("expand");
