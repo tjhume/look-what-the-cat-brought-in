@@ -36,12 +36,18 @@ if('post' == get_post_type()){ ?>
 	the_post();
 ?>
 
+<?php if(is_user_logged_in()){ ?>
+
 <section id="product-page" class="top">
 	<h1><?php the_title(); ?></h1>
 	<div class="content">
 		<?php the_content(); ?>
 	</div>
 </section>
+
+<?php }else{ ?>
+	<?php wp_redirect( "/"); ?>
+<?php } ?>
 
 <?php 
 //Default view

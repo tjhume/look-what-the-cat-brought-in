@@ -276,11 +276,13 @@ footer #menu-footer-menu{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	font-size: 0;
 }
 footer #menu-footer-menu li{
 	display: inline-block;
 	margin-left: 6px;
 	margin-right: 6px;
+	font-size: 14px;
 }
 footer #menu-footer-menu li a{
 	color: white;
@@ -1063,6 +1065,9 @@ footer #menu-footer-menu li a:hover{
 
 
 /*=== News Page ===*/
+#news{
+	min-height: 800px;
+}
 #news h1{
 	text-align: center;
 	padding-top: 50px;

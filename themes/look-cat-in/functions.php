@@ -8,21 +8,9 @@
  */
 
 if ( ! function_exists( 'look_cat_in_setup' ) ) :
-	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
-	 * Note that this function is hooked into the after_setup_theme hook, which
-	 * runs before the init hook. The init hook is too late for some features, such
-	 * as indicating support for post thumbnails.
-	 */
 	function look_cat_in_setup() {
 
-		/*
-		 * Let WordPress manage the document title.
-		 * By adding theme support, we declare that this theme does not use a
-		 * hard-coded <title> tag in the document head, and expect WordPress to
-		 * provide it for us.
-		 */
+		//Title theme support
 		add_theme_support( 'title-tag' );
 
 		//Register nav and footer menus
@@ -68,6 +56,15 @@ function look_cat_in_admin_scripts(){
 	wp_enqueue_style( 'look-cat-in-options-css', get_template_directory_uri() . '/css/admin.css' );
 }
 add_action('admin_enqueue_scripts', 'look_cat_in_admin_scripts');
+
+/**
+ * Change title separator
+ */
+add_filter( 'document_title_separator', 'look_cat_in_document_title_separator' );
+function look_cat_in_document_title_separator( $sep ) {
+    $sep = "|";
+    return $sep;
+}
 
 /**
  * Add Theme Options page
