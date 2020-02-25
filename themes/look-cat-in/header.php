@@ -17,7 +17,6 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php $logged_in = is_user_logged_in(); if($logged_in){ ?>
 		<style>
-			<?php if(is_page_template('Home')){ echo '#wp-admin-bar-elementor_edit_page,'; } ?>
 			#wp-admin-bar-comments{
 				display: none;
 			}
