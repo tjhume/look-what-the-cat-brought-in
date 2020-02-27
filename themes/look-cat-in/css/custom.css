@@ -55,7 +55,7 @@ p{
 }
 section.opacity{
 	background-color: rgb(84, 164, 255);
-	background-color: rgba(84, 164, 255, 0.7);
+	background-color: rgba(84, 164, 255, 0.75);
 }
 
 
@@ -918,8 +918,8 @@ footer #menu-footer-menu li a:hover{
 }
 #adopt #information,
 #adopt #application{
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 #adopt h1{
 	text-align: center;
@@ -985,13 +985,22 @@ footer #menu-footer-menu li a:hover{
 .adopt-row .adopt-box-content:hover .main-content{
 	opacity: 0;
 }
+#application ul{
+	margin-left: 0px;
+}
 #application .left{
 	float: left;
-	width: 25%;
+	width: 30%;
+	padding-right: 10px;
 }
 #application .right{
 	float: left;
-	width: 75%;
+	width: 70%;
+	padding-left: 10px;
+}
+#application .left img{
+	margin-top: 25px;
+	border-radius: 15px;
 }
 #application strong{
 	color: #FFE17D;
@@ -1264,6 +1273,36 @@ footer #menu-footer-menu li a:hover{
 
 
 
+/*=== Memorials Page ===*/
+#memorials{
+	min-height: 800px;
+	width: 900px;
+	max-width: 90%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#memorials h1{
+	text-align: center;
+}
+#memorials h2{
+	text-align: center;
+	line-height: 1.2;
+}
+#memorials .center{
+	text-align: center;
+}
+#memorials .rainbow-bridge{
+	width: 400px;
+	max-width: 100%;
+	margin-bottom: 50px;
+}
+/*=== End Memorials Page ===*/
+
+
+
+
 /*=== Media Queries ===*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
@@ -1443,6 +1482,16 @@ footer #menu-footer-menu li a:hover{
 		margin-right: auto;
 		margin-bottom: 20px;
 		float: none;
+	}
+	#application .left,
+	#application .right{
+		float: none;
+		width: 100%;
+		padding: 0;
+		text-align: center;
+	}
+	#application .right ul{
+		text-align: left;
 	}
 }
 

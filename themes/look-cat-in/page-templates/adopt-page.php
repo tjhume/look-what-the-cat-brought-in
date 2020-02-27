@@ -73,10 +73,10 @@ get_header(); ?>
         </section>
 
         <section id="application" class="opacity">
-            <h1>ADOPTION APPLICATION</h1>
+            <h1>ADOPTION APPLICATION - COMING SOON</h1>
             <div class="content">
                 <div class="left">
-                    <img src="" alt="">
+                    <img src="../wp-content/uploads/2020/02/adopt-me.jpg" alt="Adopt">
                 </div>
                 <div class="right">
                     <p>Ready to start the adoption process? Fill out an application!</p>
