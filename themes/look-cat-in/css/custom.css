@@ -9,11 +9,9 @@ body{
 	margin-bottom: 0;
 	color: #212529;
 }
-section.top{
+section.top,
+div.top{
 	margin-top: 60px;
-}
-body.admin-bar section.top{
-	margin-top: 92px;
 }
 h1, h2, h3, h4, h5, h6{
 	font-family: Rubik;
@@ -55,7 +53,7 @@ p{
 }
 section.opacity{
 	background-color: rgb(84, 164, 255);
-	background-color: rgba(84, 164, 255, 0.75);
+	background-color: rgba(84, 164, 255, 0.85);
 }
 
 
@@ -1283,6 +1281,10 @@ footer #menu-footer-menu li a:hover{
 	margin-left: auto;
 	margin-right: auto;
 }
+#memorials section{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
 #memorials h1{
 	text-align: center;
 }
@@ -1290,13 +1292,21 @@ footer #menu-footer-menu li a:hover{
 	text-align: center;
 	line-height: 1.2;
 }
+#memorials h2.margin{
+	margin-top: 80px;
+}
 #memorials .center{
 	text-align: center;
 }
 #memorials .rainbow-bridge{
 	width: 400px;
 	max-width: 100%;
-	margin-bottom: 50px;
+}
+#memorials .caption{
+	font-size: 14px;
+	color: #666;
+	margin-top: 5px;
+	margin-bottom: 30px;
 }
 /*=== End Memorials Page ===*/
 

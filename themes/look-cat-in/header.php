@@ -26,6 +26,10 @@
 			body.admin-bar nav{
 				top: 32px;
 			}
+			body.admin-bar section.top,
+			body.admin-bar div.top{
+				margin-top: 92px;
+			}
 		</style>
 	<?php } ?>
 	<?php wp_head(); ?>
