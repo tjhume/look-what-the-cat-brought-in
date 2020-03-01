@@ -143,11 +143,11 @@ nav{
 	-o-transform-origin: top;
 	-ms-transform-origin: top;
 	transform-origin: top;
-	-webkit-transition: -webkit-transform 0.3s ease;
-	transition: -webkit-transform 0.3s ease;
-	-o-transition: transform 0.3s ease;
-	transition: transform 0.3s ease;
-	transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+	-webkit-transition: -webkit-transform 0.2s ease;
+	transition: -webkit-transform 0.2s ease;
+	-o-transition: transform 0.2s ease;
+	transition: transform 0.2s ease;
+	transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 #menu-header-menu .sub-menu.expand{
 	-webkit-transform: scaleY(1);
