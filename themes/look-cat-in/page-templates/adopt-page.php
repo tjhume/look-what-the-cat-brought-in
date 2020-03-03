@@ -95,14 +95,32 @@ get_header(); ?>
 
         <section id="adoptable-cats">
             <h1>ADOPTABLE CATS</h1>
-            <p>Coming soon!</p>
             <?php
-                $cats = get_cats();
+                if(is_user_logged_in()){
+                    $cats = get_cats(); ?>
+                    <div id="adoptable-cats-wrapper">
+                        <?php foreach($cats as $cat){
+                            $name = $cat->{'Name'};
+                            $description = $cat->{'Description'};
+                            $img = $cat->{'CoverPhoto'}; ?>
 
-                /*foreach($cats as $cat){
-                    echo $cat->{'Name'};
-                }*/
-            ?>
+                            <div class="adoptable-cat-box">
+                                <div class="box-content">
+                                    <a href="#application"><div style="background-image:url('<?php echo $img; ?>');" class="cat-img"></div></a>
+                                    <div class="bottom">
+                                        <h2><?php echo $name; ?></h2>
+                                        <p><?php echo $description; ?></p>
+                                        <a href="#application">Adopt Now!</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <?php } ?>
+                        <div class="clear"></div>
+                    </div>
+                <?php }else{ ?>
+                    <p>Coming soon!</p>
+                <?php } ?>
         </section>
 
     </div>

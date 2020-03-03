@@ -909,13 +909,9 @@ footer #menu-footer-menu li a:hover{
 #adopt .opacity{
 	color: white;
 }
-#adopt #adoptable-cats{
-	padding-top: 50px;
-	padding-bottom: 50px;
-	height: 500px;
-}
 #adopt #information,
-#adopt #application{
+#adopt #application,
+#adopt #adoptable-cats{
 	padding-top: 100px;
 	padding-bottom: 100px;
 }
@@ -1006,6 +1002,52 @@ footer #menu-footer-menu li a:hover{
 }
 #adoptable-cats p{
 	text-align: center;
+}
+#adoptable-cats-wrapper{
+	width: 1200px;
+	margin: 0 auto;
+	max-width: 95%;
+}
+.adoptable-cat-box{
+	float: left;
+	width: 33.33%;
+	padding-left: 30px;
+	padding-right: 30px;
+	height: 415px;
+}
+.adoptable-cat-box .box-content{
+	position: relative;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 15px;
+	height: 415px;
+	-webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.5);
+}
+.adoptable-cat-box .cat-img{
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+	height: 200px;
+}
+#adoptable-cats .adoptable-cat-box p{
+	text-align: left;
+	line-height: 1.1;
+}
+.adoptable-cat-box .bottom a{
+	color: #6DB2FF;
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+	-webkit-transition-duration: 0.3s;
+         -o-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+}
+.adoptable-cat-box .bottom a:hover{
+	-webkit-transform: rotate(-4deg);
+        -ms-transform: rotate(-4deg);
+            transform: rotate(-4deg);
 }
 /*=== End Adopt Page ===*/
 
@@ -1502,6 +1544,15 @@ footer #menu-footer-menu li a:hover{
 	}
 	#application .right ul{
 		text-align: left;
+	}
+	.adoptable-cat-box{
+		float: none;
+		width: 500px;
+		max-width: 95%;
+		padding: 0;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50px;
 	}
 }
 
