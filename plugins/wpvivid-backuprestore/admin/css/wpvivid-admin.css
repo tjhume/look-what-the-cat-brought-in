@@ -219,6 +219,18 @@
 	padding:4px 5px;
 }
 
+.wpvivid-debug-text-fix{
+	height: 28px;
+	line-height: 28px;
+}
+
+@media screen and (max-width: 782px) {
+	.wpvivid-debug-text-fix{
+		height: 36px;
+		line-height: 36px;
+	}
+}
+
 .wpvivid-text-space-bottom{margin-bottom: 5px;}
 .wpvivid-text-space-right{margin-right: 5px;}
 .wpvivid-element-space-bottom{margin-bottom: 10px;}

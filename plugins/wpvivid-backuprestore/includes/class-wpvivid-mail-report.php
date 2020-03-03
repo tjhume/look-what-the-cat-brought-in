@@ -500,10 +500,14 @@ class WPvivid_mail_report
         return $body;
     }
 
-    public static function wpvivid_send_debug_info($user_email){
+    public static function wpvivid_send_debug_info($user_email,$server_type,$host_provider,$comment)
+    {
         $send_to = 'support@wpvivid.com';
         $subject = 'Debug Information';
-        $body = 'User\'s email is '.$user_email;
+        $body = '<div>User\'s email: '.$user_email.'.</div>';
+        $body .= '<div>Server type: '.$server_type.'.</div>';
+        $body .= '<div>Host provider: '.$host_provider.'.</div>';
+        $body .= '<div>Comment: '.$comment.'.</div>';
         $headers = array('Content-Type: text/html; charset=UTF-8');
 
         $files=WPvivid_error_log::get_error_log();

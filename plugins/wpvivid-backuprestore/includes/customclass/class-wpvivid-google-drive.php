@@ -600,7 +600,7 @@ class Wpvivid_Google_drive extends WPvivid_Remote
         return array('result' =>WPVIVID_SUCCESS);
     }
 
-    public function check_token($client)
+    public function check_token(&$client)
     {
         if ($client->isAccessTokenExpired())
         {
@@ -633,7 +633,7 @@ class Wpvivid_Google_drive extends WPvivid_Remote
     {
         global $wpvivid_plugin;
         $wpvivid_plugin->wpvivid_log->WriteLog('Check if the server already has the same name file.','notice');
-        if(!$this->delete_exist_file($folder_id,$file,$service))
+        if(!$this->delete_exist_file($folder_id,basename($file),$service))
         {
             return array('result' =>WPVIVID_FAILED,'error'=>'Uploading '.$file.' to Google Drive server failed. '.$file.' might be deleted or network doesn\'t work properly . Please verify the file and confirm the network connection and try again later.');
         }

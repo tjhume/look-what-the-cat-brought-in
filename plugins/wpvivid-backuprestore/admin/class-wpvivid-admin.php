@@ -863,6 +863,32 @@ class WPvivid_Admin {
                     <span class="wpvivid-element-space-right">WPvivid support email:</span><input type="text" id="wpvivid_support_mail" value="support@wpvivid.com" readonly />
                     <span class="wpvivid-element-space-right">Your email:</span><input type="text" id="wpvivid_user_mail" />
                 </div>
+                <div style="padding:10px 10px 0">
+                    <div style="float: left;">
+                        <div class="wpvivid-element-space-bottom wpvivid-text-space-right wpvivid-debug-text-fix"
+                             style="float: left;">I am using:
+                        </div>
+                        <div class="wpvivid-element-space-bottom wpvivid-text-space-right" style="float: left;">
+                            <select id="wpvivid_debug_type">
+                                <option selected="selected" value="sharehost">share hosting</option>
+                                <option value="vps">VPS hosting</option>
+                            </select>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <div id="wpvivid_debug_host" style="float: left;">
+                        <div class="wpvivid-element-space-bottom wpvivid-text-space-right wpvivid-debug-text-fix"
+                             style="float: left;">My web hosting provider is:
+                        </div>
+                        <div class="wpvivid-element-space-bottom wpvivid-text-space-right" style="float: left;">
+                            <input type="text" id="wpvivid_host_provider"/></div>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+                <div style="padding:0 10px;">
+                    <textarea id="wpvivid_debug_comment" class="wp-editor-area" style="width:100%; height: 200px;" autocomplete="off" cols="60" placeholder="Please describe your problem here." ></textarea>
+                </div>
                 <div class="schedule-tab-block">
                     <input class="button-primary" type="submit" value="<?php esc_attr_e( 'Send Debug Information to Us', 'wpvivid' ); ?>" onclick="wpvivid_click_send_debug_info();" />
                 </div>
@@ -931,11 +957,30 @@ class WPvivid_Admin {
                 location.href =ajaxurl+'?action=wpvivid_create_debug_package';
             }
 
+            jQuery("#wpvivid_debug_type").change(function()
+            {
+                if(jQuery(this).val()=='sharehost')
+                {
+                    jQuery("#wpvivid_debug_host").show();
+                }
+                else
+                {
+                    jQuery("#wpvivid_debug_host").hide();
+                }
+            });
+
             function wpvivid_click_send_debug_info(){
                 var wpvivid_user_mail = jQuery('#wpvivid_user_mail').val();
+                var server_type = jQuery('#wpvivid_debug_type').val();
+                var host_provider = jQuery('#wpvivid_host_provider').val();
+                var comment = jQuery('#wpvivid_debug_comment').val();
+
                 var ajax_data = {
                     'action': 'wpvivid_send_debug_info',
-                    'user_mail': wpvivid_user_mail
+                    'user_mail': wpvivid_user_mail,
+                    'server_type':server_type,
+                    'host_provider':host_provider,
+                    'comment':comment
                 };
                 wpvivid_post_request(ajax_data, function (data) {
                     try {

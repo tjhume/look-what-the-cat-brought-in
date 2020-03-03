@@ -990,6 +990,8 @@ class WPvivid_RestoreDB
                 $props = get_object_vars($data);
                 foreach ($props as $key => $value)
                 {
+                    if (strpos($key, "\0")===0)
+                        continue;
                     if(is_string($value))
                     {
                         $temp->$key =$this->replace_string($value);

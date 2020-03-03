@@ -362,7 +362,7 @@ class WPvivid_ZipClass extends Wpvivid_Compress_Default
         $ret['result']=WPVIVID_SUCCESS;
         foreach ($files as $file)
         {
-            $wpvivid_plugin->restore_data->write_log('start extract file:'.$file,'notice');
+            $wpvivid_plugin->restore_data->write_log('start extracting file:'.$file,'notice');
             $archive = new PclZip($file);
             $zip_ret = $archive->extract(PCLZIP_OPT_PATH, $path,PCLZIP_OPT_REPLACE_NEWER,PCLZIP_CB_PRE_EXTRACT,'wpvivid_function_pre_extract_callback',PCLZIP_OPT_TEMP_FILE_THRESHOLD,16);
             if(!$zip_ret)
@@ -391,7 +391,7 @@ class WPvivid_ZipClass extends Wpvivid_Compress_Default
         $ret['result']=WPVIVID_SUCCESS;
         foreach ($files as $file)
         {
-            $wpvivid_plugin->restore_data->write_log('start extract file:'.$file,'notice');
+            $wpvivid_plugin->restore_data->write_log('start extracting file:'.$file,'notice');
             $wpvivid_plugin->restore_data->write_log('extract child file:'.json_encode($extract_files),'notice');
             $archive = new PclZip($file);
             $zip_ret = $archive->extract(PCLZIP_OPT_BY_NAME,$extract_files,PCLZIP_OPT_PATH, $path,PCLZIP_OPT_REPLACE_NEWER,PCLZIP_CB_PRE_EXTRACT,'wpvivid_function_pre_extract_callback',PCLZIP_OPT_TEMP_FILE_THRESHOLD,16);
@@ -970,6 +970,9 @@ class WPvivid_PclZip_Class
             {
                 @unlink($temp_path);
             }
+            $json_info['php_version'] = phpversion();
+            global $wpdb;
+            $json_info['mysql_version'] = $wpdb->db_version();
             file_put_contents($temp_path,print_r(json_encode($json_info),true));
             $archive -> add($temp_path,PCLZIP_OPT_REMOVE_PATH,dirname($temp_path));
             @unlink($temp_path);

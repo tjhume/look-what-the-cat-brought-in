@@ -842,6 +842,13 @@ function wpvivid_backuppage_add_page_log(){
 }
 
 function wpvivid_backuppage_add_page_restore(){
+    $general_setting=WPvivid_Setting::get_setting(true, "");
+    if(isset($general_setting['options']['wpvivid_common_setting']['restore_max_execution_time'])){
+        $restore_max_execution_time = intval($general_setting['options']['wpvivid_common_setting']['restore_max_execution_time']);
+    }
+    else{
+        $restore_max_execution_time = WPVIVID_RESTORE_MAX_EXECUTION_TIME;
+    }
     ?>
     <div class="backup-tab-content wpvivid_tab_restore" id="page-restore" style="display:none;">
         <div>
@@ -872,6 +879,8 @@ function wpvivid_backuppage_add_page_restore(){
         <div class="postbox restore_log" id="wpvivid_restore_log"></div>
     </div>
     <script>
+        var restore_max_exection_time = '<?php echo $restore_max_execution_time; ?>';
+        restore_max_exection_time = restore_max_exection_time * 1000;
         jQuery('#wpvivid_clean_restore').click(function(){
             wpvivid_delete_incompleted_restore();
         });
@@ -1351,7 +1360,7 @@ function wpvivid_backuppage_add_page_restore(){
             };
             setTimeout(function () {
                 wpvivid_restore_timeout = true;
-            }, 1800000);
+            }, restore_max_exection_time);
             wpvivid_post_request(ajax_data, function(data) {
             }, function(XMLHttpRequest, textStatus, errorThrown) {
             });

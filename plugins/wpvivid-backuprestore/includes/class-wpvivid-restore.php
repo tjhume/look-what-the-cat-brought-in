@@ -13,7 +13,14 @@ class WPvivid_Restore
 {
     public function restore()
     {
-        @set_time_limit(1800);
+        $general_setting=WPvivid_Setting::get_setting(true, "");
+        if(isset($general_setting['options']['wpvivid_common_setting']['restore_max_execution_time'])){
+            $restore_max_execution_time = intval($general_setting['options']['wpvivid_common_setting']['restore_max_execution_time']);
+        }
+        else{
+            $restore_max_execution_time = WPVIVID_RESTORE_MAX_EXECUTION_TIME;
+        }
+        @set_time_limit($restore_max_execution_time);
 
         global $wpvivid_plugin;
 

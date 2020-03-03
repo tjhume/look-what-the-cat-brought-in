@@ -3269,6 +3269,7 @@ class WPvivid {
                 }
                 else if ($status === WPVIVID_RESTORE_COMPLETED)
                 {
+                    $this->write_litespeed_rule(false);
                     $this->restore_data->write_log('disable maintenance mode', 'notice');
                     $this->restore_data->delete_temp_files();
                     $this->_disable_maintenance_mode();
@@ -3300,6 +3301,7 @@ class WPvivid {
         try
         {
             $this->_enable_maintenance_mode();
+            $this->write_litespeed_rule();
             $restore=new WPvivid_Restore();
             $common_setting = WPvivid_Setting::get_option('wpvivid_common_setting');
             if(isset($common_setting['restore_memory_limit']) && !empty($common_setting['restore_memory_limit'])){
@@ -3355,6 +3357,51 @@ class WPvivid {
         die();
     }
 
+    public function write_litespeed_rule($open=true)
+    {
+        $litespeed=false;
+        if ( isset( $_SERVER['HTTP_X_LSCACHE'] ) && $_SERVER['HTTP_X_LSCACHE'] )
+        {
+            $litespeed=true;
+        }
+        elseif ( isset( $_SERVER['LSWS_EDITION'] ) && strpos( $_SERVER['LSWS_EDITION'], 'Openlitespeed' ) === 0 ) {
+            $litespeed=true;
+        }
+        elseif ( isset( $_SERVER['SERVER_SOFTWARE'] ) && $_SERVER['SERVER_SOFTWARE'] == 'LiteSpeed' ) {
+            $litespeed=true;
+        }
+
+        if($litespeed)
+        {
+            if (function_exists('insert_with_markers'))
+            {
+                $home_path     = get_home_path();
+                $htaccess_file = $home_path . '.htaccess';
+
+                if ( ( ! file_exists( $htaccess_file ) && is_writable( $home_path ) ) || is_writable( $htaccess_file ) )
+                {
+                    if ( got_mod_rewrite() )
+                    {
+                        if($open)
+                        {
+                            $line=array();
+                            $line[]='<IfModule Litespeed>';
+                            $line[]='RewriteEngine On';
+                            $line[]='RewriteRule .* - [E=noabort:1, E=noconntimeout:1]';
+                            $line[]='</IfModule>';
+                            insert_with_markers($htaccess_file,'WPvivid_Restore',$line);
+                        }
+                        else
+                        {
+                            insert_with_markers($htaccess_file,'WPvivid_Restore','');
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
     public function deal_restore_shutdown_error()
     {
         if($this->end_shutdown_function===false)
@@ -3378,7 +3425,7 @@ class WPvivid {
                 echo json_encode(array('result'=>WPVIVID_FAILED,'error'=>$message));
             }
             else {
-                $message = __('backup failed error unknown', 'wpvivid');
+                $message = __('restore failed error unknown', 'wpvivid');
                 $this->restore_data->delete_temp_files();
                 $this->restore_data->update_error($message);
                 $this->restore_data->write_log($message,'error');
@@ -4300,6 +4347,7 @@ class WPvivid {
         $setting['use_temp_size'] = intval($setting['use_temp_size']);
         $setting['exclude_file_size'] = intval($setting['exclude_file_size']);
         $setting['max_execution_time'] = intval($setting['max_execution_time']);
+        $setting['restore_max_execution_time'] = intval($setting['restore_max_execution_time']);
         $setting['max_backup_count'] = intval($setting['max_backup_count']);
         $setting['max_resume_count'] = intval($setting['max_resume_count']);
 
@@ -4321,6 +4369,7 @@ class WPvivid {
         $setting_data['wpvivid_local_setting']['save_local'] = $options['options']['wpvivid_local_setting']['save_local'];
 
         $setting_data['wpvivid_common_setting']['max_execution_time'] = $setting['max_execution_time'];
+        $setting_data['wpvivid_common_setting']['restore_max_execution_time'] = $setting['restore_max_execution_time'];
         $setting_data['wpvivid_common_setting']['log_save_location'] = $setting['path'].'/wpvivid_log';
         $setting_data['wpvivid_common_setting']['max_backup_count'] = $setting['max_backup_count'];
         $setting_data['wpvivid_common_setting']['show_admin_bar'] = $setting['show_admin_bar'];
@@ -4565,8 +4614,9 @@ class WPvivid {
                 $parse['host'] = str_replace('/', '_', $parse['host']);
                 $parse['host'] = str_replace('.', '_', $parse['host']);
                 $domain_tran = $parse['host'].$path;
-                $date_format = date("Ymd",time());
-                $time_format = date("his",time());
+                $offset=get_option('gmt_offset');
+                $date_format = date("Ymd",time()+$offset*60*60);
+                $time_format = date("His",time()+$offset*60*60);
                 $export_file_name = 'wpvivid_setting-'.$domain_tran.'-'.$date_format.'-'.$time_format.'.json';
                 if (!headers_sent()) {
                     header('Content-Disposition: attachment; filename='.$export_file_name);
@@ -5476,7 +5526,7 @@ class WPvivid {
                     $ret['error'] = __('Please enter a valid email address.', 'wpvivid');
                 } else {
                     $this->ajax_check_security();
-                    $ret = WPvivid_mail_report::wpvivid_send_debug_info($_POST['user_mail']);
+                    $ret = WPvivid_mail_report::wpvivid_send_debug_info($_POST['user_mail'],$_POST['server_type'],$_POST['host_provider'],$_POST['comment']);
                 }
             }
             echo json_encode($ret);

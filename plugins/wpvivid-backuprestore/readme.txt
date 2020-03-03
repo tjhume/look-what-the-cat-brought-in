@@ -4,7 +4,7 @@ Tags: move, clone, migrate, copy, backup, restore, auto backup, cloud backup
 Requires at least: 4.5
 Tested up to: 5.3.2
 Requires PHP: 5.3
-Stable tag: 0.9.34
+Stable tag: 0.9.35
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -24,7 +24,7 @@ Click to download [WPvivid Backup for MainWP](https://wordpress.org/plugins/wpvi
 == WPvivid Backup Pro is Now Available ==
 * Customize everything to backup
 * Create staging sites and push staging to live site
-* Incremental backups(coming soon)
+* Incremental backups
 * Rollback WordPress core, themes, and plugins
 * WordPress Multisite backup
 * Advanced remote storage
@@ -58,7 +58,8 @@ Restore your WordPress site from a backup with a single click.
 
 == Cloud Storage Supported ==
 
-Dropbox, Google Drive, Microsoft OneDrive, Amazon S3, DigitalOcean Spaces, SFTP, FTP and more are coming soon.
+Dropbox, Google Drive, Microsoft OneDrive, Amazon S3, DigitalOcean Spaces, SFTP, FTP.
+The pro version also supports Wasabi, pCloud and more are coming soon.
 
 == Site Migration Process ==
 1. Install the WPvivid Backup plugin on both the destination site and the sending site.
@@ -171,6 +172,10 @@ Thank you for translating WPvivid Backup Plugin to your languages!
 * [Shohei OKADA](https://ja.gravatar.com/silversword0630)(Japanese)
 
 == Changelog ==
+= 0.9.35 =
+- Fixed a bug occurred when connecting with remote storage in some cases.
+- Fixed some bugs in the plugin code.
+- Optimized the plugin UI.
 = 0.9.34 =
 - Fixed the PHP 7.4 compatibility issue.
 - Fixed: Backing up upload directory failed in some cases.

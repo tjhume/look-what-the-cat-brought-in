@@ -544,6 +544,12 @@ function wpvivid_advanced_settings()
         $db_method_wpdb = 'checked';
         $db_method_pdo  = '';
     }
+    if(isset($general_setting['options']['wpvivid_common_setting']['restore_max_execution_time'])){
+        $restore_max_execution_time = intval($general_setting['options']['wpvivid_common_setting']['restore_max_execution_time']);
+    }
+    else{
+        $restore_max_execution_time = WPVIVID_RESTORE_MAX_EXECUTION_TIME;
+    }
     ?>
     <div class="postbox schedule-tab-block setting-page-content">
         <div>
@@ -603,10 +609,15 @@ function wpvivid_advanced_settings()
                 <input type="text" placeholder="400" option="setting" name="exclude_file_size" id="wpvivid_ignore_large" class="all-options" value="<?php esc_attr_e($general_setting['options']['wpvivid_compress_setting']['exclude_file_size'], 'wpvivid'); ?>" onkeyup="value=value.replace(/\D/g,'')" />MB
                 <div><p><?php _e( 'Using the option will ignore the file larger than the certain size in MB when backing up, \'0\' (zero) means unlimited.', 'wpvivid' ); ?></p></div>
             </div>
-            <div><strong><?php _e('PHP script execution timeout', 'wpvivid'); ?></strong></div>
+            <div><strong><?php _e('PHP script execution timeout for backup', 'wpvivid'); ?></strong></div>
             <div class="setting-tab-block">
                 <input type="text" placeholder="600" option="setting" name="max_execution_time" id="wpvivid_option_timeout" class="all-options" value="<?php esc_attr_e($general_setting['options']['wpvivid_common_setting']['max_execution_time'], 'wpvivid'); ?>" onkeyup="value=value.replace(/\D/g,'')" />Seconds
-                <div><p><?php _e( 'The time-out is not your server PHP time-out. With the execution time exhausted, our plugin will shut the process of backup down. If the progress of backup encounters a time-out, that means you have a medium or large sized website, please try to scale the value bigger. ', 'wpvivid' ); ?></p></div>
+                <div><p><?php _e( 'The time-out is not your server PHP time-out. With the execution time exhausted, our plugin will shut the process of backup down. If the progress of backup encounters a time-out, that means you have a medium or large sized website, please try to scale the value bigger.', 'wpvivid' ); ?></p></div>
+            </div>
+            <div><strong><?php _e('PHP script execution timeout for restore', 'wpvivid'); ?></strong></div>
+            <div class="setting-tab-block">
+                <input type="text" placeholder="1800" option="setting" name="restore_max_execution_time" class="all-options" value="<?php esc_attr_e($restore_max_execution_time); ?>" onkeyup="value=value.replace(/\D/g,'')" />Seconds
+                <div><p><?php _e( 'The time-out is not your server PHP time-out. With the execution time exhausted, our plugin will shut the process of restore down. If the progress of restore encounters a time-out, that means you have a medium or large sized website, please try to scale the value bigger.', 'wpvivid' ); ?></p></div>
             </div>
             <div><strong><?php _e('PHP Memory Limit for backup', 'wpvivid'); ?></strong></div>
             <div class="setting-tab-block">

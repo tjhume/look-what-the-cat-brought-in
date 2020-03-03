@@ -125,10 +125,13 @@ class WPvivid_RestoreSite
 
                 unset($zip);
 
-                if (isset($option['wp_core']) && isset($option['is_migrate'])) {
+                if (isset($option['wp_core']) && isset($option['is_migrate']))
+                {
                     if ($option['is_migrate'] == 1) {
-                        if (function_exists('save_mod_rewrite_rules')) {
-                            if (file_exists(get_home_path() . '.htaccess')) {
+                        if (function_exists('save_mod_rewrite_rules'))
+                        {
+                            if (file_exists(get_home_path() . '.htaccess'))
+                            {
                                 $htaccess_data = file_get_contents(get_home_path() . '.htaccess');
                                 $line = '';
                                 if (preg_match('#AddHandler application/x-httpd-php.*#', $htaccess_data, $matcher)) {
