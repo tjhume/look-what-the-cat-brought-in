@@ -40,7 +40,7 @@
 	<header>
 		<nav>
 			<div id="nav-logo">
-				<a href="/"><img src="<?php the_field('site_logo', 'option'); ?>" alt="Look What the Cat Brought In"></a>
+				<a href="<?php echo get_home_url(); ?>"><img src="<?php the_field('site_logo', 'option'); ?>" alt="Look What the Cat Brought In"></a>
 			</div>
 			<div id="nav-links">
 				<?php wp_nav_menu( array(

@@ -178,10 +178,10 @@ get_header(); ?>
                 $src = esc_url($image['url']);
             ?>
             <div class="featured-cat-box">
-                <a href="/adopt"><img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>"></a>
+                <a href="adopt"><img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>"></a>
                 <h2><?php the_field('cat_1_name'); ?></h2>
                 <p><?php the_field('cat_1_description'); ?></p>
-                <p><a href="/adopt">Learn More &rarr;</a></p>
+                <p><a href="adopt">Learn More &rarr;</a></p>
             </div>
             <?php
                 $image = get_field('cat_2_image');
@@ -189,10 +189,10 @@ get_header(); ?>
                 $src = esc_url($image['url']);
             ?>
             <div class="featured-cat-box">
-                <a href="/adopt"><img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>"></a>
+                <a href="adopt"><img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>"></a>
                 <h2><?php the_field('cat_2_name'); ?></h2>
                 <p><?php the_field('cat_2_description') ?></p>
-                <p><a href="/adopt">Learn More &rarr;</a></p>
+                <p><a href="adopt">Learn More &rarr;</a></p>
             </div>
             <?php
                 $image = get_field('cat_3_image');
@@ -200,10 +200,10 @@ get_header(); ?>
                 $src = esc_url($image['url']);
             ?>
             <div class="featured-cat-box">
-                <a href="/adopt"><img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>"></a>
+                <a href="adopt"><img src="<?php echo $src; ?>" alt="<?php echo $alt; ?>"></a>
                 <h2><?php the_field('cat_3_name'); ?></h2>
                 <p><?php the_field('cat_3_description'); ?></p>
-                <p><a href="/adopt">Learn More &rarr;</a></p>
+                <p><a href="adopt">Learn More &rarr;</a></p>
             </div>
             <div class="clear"></div>
         </div>
