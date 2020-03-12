@@ -32,11 +32,7 @@ get_header(); ?>
                     <h2><?php the_title(); ?></h2>
                     <p><?php echo $excerpt; ?></p>
                     <time class="post-date">
-                        <?php if(get_field('use_custom_date')){
-                            the_field('date');
-                        }else{
-                            the_date();
-                        }?>
+                        <?php echo get_the_date('F j, Y'); ?>
                     </time>
                 </div>
                 </a>
